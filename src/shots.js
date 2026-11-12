@@ -401,7 +401,7 @@ export function buildShots(w, tl) {
     c.show('interior', 'hero');
     interiorLight(); hero.vest.visible = false;
     const i = lerp(4, 46, c.u), a = i * 0.32, y = 3.2 + i * 0.28;
-    interior.steps.forEach((s, j) => (s.visible = j < i + 10));
+    interior.steps.forEach((s, j) => (s.visible = j < i + 1.5));
     hero.run(c.t, 1.8); hero.face('determined');
     hero.root.position.set(Math.cos(a) * 3.2, y + 0.15, Math.sin(a) * 3.2);
     hero.root.rotation.set(0, -a, 0);
