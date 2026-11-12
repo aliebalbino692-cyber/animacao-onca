@@ -1,0 +1,790 @@
+{
+ "duration": 61.949,
+ "lines": [
+  {
+   "index": 1,
+   "text": "Eu só ia pescar por uma hora.",
+   "start": 1.2,
+   "speechEnd": 2.756,
+   "end": 3.556
+  },
+  {
+   "index": 2,
+   "text": "Mas o céu ficou preto em minutos.",
+   "start": 3.556,
+   "speechEnd": 5.493,
+   "end": 6.293
+  },
+  {
+   "index": 3,
+   "text": "Uma onda gigante virou meu barco.",
+   "start": 6.293,
+   "speechEnd": 8.836,
+   "end": 10.236
+  },
+  {
+   "index": 4,
+   "text": "Eu fiquei preso embaixo dele, sem ar.",
+   "start": 10.236,
+   "speechEnd": 12.491,
+   "end": 13.391
+  },
+  {
+   "index": 5,
+   "text": "Tirei o colete, mergulhei fundo... e escapei.",
+   "start": 13.391,
+   "speechEnd": 16.012,
+   "end": 16.712
+  },
+  {
+   "index": 6,
+   "text": "Nadei a noite inteira, até sentir areia.",
+   "start": 16.712,
+   "speechEnd": 19.345,
+   "end": 20.445
+  },
+  {
+   "index": 7,
+   "text": "Era uma ilha que não existia em nenhum mapa.",
+   "start": 20.445,
+   "speechEnd": 22.923,
+   "end": 23.623
+  },
+  {
+   "index": 8,
+   "text": "No alto, um farol abandonado.",
+   "start": 23.623,
+   "speechEnd": 25.681,
+   "end": 26.481
+  },
+  {
+   "index": 9,
+   "text": "Lá dentro: água, comida... e um sinalizador com um tiro.",
+   "start": 26.481,
+   "speechEnd": 30.276,
+   "end": 30.976
+  },
+  {
+   "index": 10,
+   "text": "Na parede, alguém riscou quarenta e dois dias.",
+   "start": 30.976,
+   "speechEnd": 33.884,
+   "end": 34.584
+  },
+  {
+   "index": 11,
+   "text": "E escreveu: \"Não confie na maré.\"",
+   "start": 34.584,
+   "speechEnd": 37.068,
+   "end": 38.168
+  },
+  {
+   "index": 12,
+   "text": "No dia seguinte, a maré engoliu a praia.",
+   "start": 38.168,
+   "speechEnd": 40.397,
+   "end": 40.897
+  },
+  {
+   "index": 13,
+   "text": "Corri pela escada do farol.",
+   "start": 40.897,
+   "speechEnd": 42.272,
+   "end": 42.972
+  },
+  {
+   "index": 14,
+   "text": "Lá de cima, eu vi duas coisas.",
+   "start": 42.972,
+   "speechEnd": 44.835,
+   "end": 45.435
+  },
+  {
+   "index": 15,
+   "text": "Um navio, muito longe.",
+   "start": 45.435,
+   "speechEnd": 47.113,
+   "end": 47.713
+  },
+  {
+   "index": 16,
+   "text": "E fumaça na mata. Alguém mais estava vivo.",
+   "start": 47.713,
+   "speechEnd": 50.407,
+   "end": 51.307
+  },
+  {
+   "index": 17,
+   "text": "Eu só tenho um tiro.",
+   "start": 51.307,
+   "speechEnd": 52.5,
+   "end": 53.1
+  },
+  {
+   "index": 18,
+   "text": "Atiro pro navio... ou corro até a fumaça?",
+   "start": 53.1,
+   "speechEnd": 55.474,
+   "end": 56.674
+  },
+  {
+   "index": 19,
+   "text": "O que você faria? Comenta aí!",
+   "start": 56.674,
+   "speechEnd": 58.449,
+   "end": 61.949
+  }
+ ],
+ "words": [
+  {
+   "text": "Eu",
+   "start": 1.241,
+   "end": 1.361
+  },
+  {
+   "text": "só",
+   "start": 1.401,
+   "end": 1.521
+  },
+  {
+   "text": "ia",
+   "start": 1.561,
+   "end": 1.681
+  },
+  {
+   "text": "pescar",
+   "start": 1.694,
+   "end": 2.001
+  },
+  {
+   "text": "por",
+   "start": 2.001,
+   "end": 2.081
+  },
+  {
+   "text": "uma",
+   "start": 2.121,
+   "end": 2.321
+  },
+  {
+   "text": "hora.",
+   "start": 2.361,
+   "end": 2.756
+  },
+  {
+   "text": "Mas",
+   "start": 3.801,
+   "end": 4.001
+  },
+  {
+   "text": "o",
+   "start": 4.001,
+   "end": 4.081
+  },
+  {
+   "text": "céu",
+   "start": 4.081,
+   "end": 4.241
+  },
+  {
+   "text": "ficou",
+   "start": 4.281,
+   "end": 4.481
+  },
+  {
+   "text": "preto",
+   "start": 4.521,
+   "end": 4.721
+  },
+  {
+   "text": "em",
+   "start": 4.721,
+   "end": 4.801
+  },
+  {
+   "text": "minutos.",
+   "start": 4.841,
+   "end": 5.493
+  },
+  {
+   "text": "Uma",
+   "start": 6.521,
+   "end": 6.641
+  },
+  {
+   "text": "onda",
+   "start": 6.681,
+   "end": 6.881
+  },
+  {
+   "text": "gigante",
+   "start": 6.881,
+   "end": 7.361
+  },
+  {
+   "text": "virou",
+   "start": 7.401,
+   "end": 7.601
+  },
+  {
+   "text": "meu",
+   "start": 7.601,
+   "end": 7.761
+  },
+  {
+   "text": "barco.",
+   "start": 7.841,
+   "end": 8.361
+  },
+  {
+   "text": "Eu",
+   "start": 10.441,
+   "end": 10.521
+  },
+  {
+   "text": "fiquei",
+   "start": 10.561,
+   "end": 10.761
+  },
+  {
+   "text": "preso",
+   "start": 10.801,
+   "end": 11.028
+  },
+  {
+   "text": "embaixo",
+   "start": 11.014,
+   "end": 11.321
+  },
+  {
+   "text": "dele,",
+   "start": 11.361,
+   "end": 11.641
+  },
+  {
+   "text": "sem",
+   "start": 11.681,
+   "end": 11.881
+  },
+  {
+   "text": "ar.",
+   "start": 11.961,
+   "end": 12.321
+  },
+  {
+   "text": "Tirei",
+   "start": 13.391,
+   "end": 13.608
+  },
+  {
+   "text": "o",
+   "start": 13.594,
+   "end": 13.674
+  },
+  {
+   "text": "colete,",
+   "start": 13.661,
+   "end": 14.141
+  },
+  {
+   "text": "mergulhei",
+   "start": 14.181,
+   "end": 14.621
+  },
+  {
+   "text": "fundo...",
+   "start": 14.661,
+   "end": 15.288
+  },
+  {
+   "text": "e",
+   "start": 15.274,
+   "end": 15.354
+  },
+  {
+   "text": "escapei.",
+   "start": 15.501,
+   "end": 16.012
+  },
+  {
+   "text": "Nadei",
+   "start": 16.961,
+   "end": 17.241
+  },
+  {
+   "text": "a",
+   "start": 17.241,
+   "end": 17.321
+  },
+  {
+   "text": "noite",
+   "start": 17.321,
+   "end": 17.561
+  },
+  {
+   "text": "inteira,",
+   "start": 17.681,
+   "end": 18.281
+  },
+  {
+   "text": "até",
+   "start": 18.321,
+   "end": 18.481
+  },
+  {
+   "text": "sentir",
+   "start": 18.481,
+   "end": 18.761
+  },
+  {
+   "text": "areia.",
+   "start": 18.841,
+   "end": 19.345
+  },
+  {
+   "text": "Era",
+   "start": 20.621,
+   "end": 20.741
+  },
+  {
+   "text": "uma",
+   "start": 20.781,
+   "end": 20.901
+  },
+  {
+   "text": "ilha",
+   "start": 20.941,
+   "end": 21.141
+  },
+  {
+   "text": "que",
+   "start": 21.181,
+   "end": 21.301
+  },
+  {
+   "text": "não",
+   "start": 21.288,
+   "end": 21.381
+  },
+  {
+   "text": "existia",
+   "start": 21.421,
+   "end": 21.861
+  },
+  {
+   "text": "em",
+   "start": 21.861,
+   "end": 21.941
+  },
+  {
+   "text": "nenhum",
+   "start": 21.981,
+   "end": 22.261
+  },
+  {
+   "text": "mapa.",
+   "start": 22.301,
+   "end": 22.923
+  },
+  {
+   "text": "No",
+   "start": 23.801,
+   "end": 23.921
+  },
+  {
+   "text": "alto,",
+   "start": 23.961,
+   "end": 24.534
+  },
+  {
+   "text": "um",
+   "start": 24.548,
+   "end": 24.641
+  },
+  {
+   "text": "farol",
+   "start": 24.681,
+   "end": 24.881
+  },
+  {
+   "text": "abandonado.",
+   "start": 24.921,
+   "end": 25.681
+  },
+  {
+   "text": "Lá",
+   "start": 26.654,
+   "end": 26.801
+  },
+  {
+   "text": "dentro:",
+   "start": 26.881,
+   "end": 27.441
+  },
+  {
+   "text": "água,",
+   "start": 27.481,
+   "end": 28.001
+  },
+  {
+   "text": "comida...",
+   "start": 28.041,
+   "end": 28.668
+  },
+  {
+   "text": "e",
+   "start": 28.654,
+   "end": 28.734
+  },
+  {
+   "text": "um",
+   "start": 28.721,
+   "end": 28.801
+  },
+  {
+   "text": "sinalizador",
+   "start": 28.841,
+   "end": 29.521
+  },
+  {
+   "text": "com",
+   "start": 29.521,
+   "end": 29.601
+  },
+  {
+   "text": "um",
+   "start": 29.641,
+   "end": 29.761
+  },
+  {
+   "text": "tiro.",
+   "start": 29.801,
+   "end": 30.276
+  },
+  {
+   "text": "Na",
+   "start": 31.141,
+   "end": 31.261
+  },
+  {
+   "text": "parede,",
+   "start": 31.301,
+   "end": 31.848
+  },
+  {
+   "text": "alguém",
+   "start": 31.834,
+   "end": 32.061
+  },
+  {
+   "text": "riscou",
+   "start": 32.061,
+   "end": 32.461
+  },
+  {
+   "text": "quarenta",
+   "start": 32.461,
+   "end": 32.888
+  },
+  {
+   "text": "e",
+   "start": 32.874,
+   "end": 32.954
+  },
+  {
+   "text": "dois",
+   "start": 32.981,
+   "end": 33.261
+  },
+  {
+   "text": "dias.",
+   "start": 33.261,
+   "end": 33.884
+  },
+  {
+   "text": "E",
+   "start": 34.721,
+   "end": 34.801
+  },
+  {
+   "text": "escreveu:",
+   "start": 34.801,
+   "end": 35.748
+  },
+  {
+   "text": "\"Não",
+   "start": 35.734,
+   "end": 35.961
+  },
+  {
+   "text": "confie",
+   "start": 36.081,
+   "end": 36.361
+  },
+  {
+   "text": "na",
+   "start": 36.401,
+   "end": 36.521
+  },
+  {
+   "text": "maré.\"",
+   "start": 36.561,
+   "end": 37.068
+  },
+  {
+   "text": "No",
+   "start": 38.301,
+   "end": 38.421
+  },
+  {
+   "text": "dia",
+   "start": 38.461,
+   "end": 38.581
+  },
+  {
+   "text": "seguinte,",
+   "start": 38.621,
+   "end": 39.101
+  },
+  {
+   "text": "a",
+   "start": 39.101,
+   "end": 39.181
+  },
+  {
+   "text": "maré",
+   "start": 39.181,
+   "end": 39.434
+  },
+  {
+   "text": "engoliu",
+   "start": 39.448,
+   "end": 39.821
+  },
+  {
+   "text": "a",
+   "start": 39.821,
+   "end": 39.941
+  },
+  {
+   "text": "praia.",
+   "start": 39.981,
+   "end": 40.397
+  },
+  {
+   "text": "Corri",
+   "start": 41.068,
+   "end": 41.241
+  },
+  {
+   "text": "pela",
+   "start": 41.281,
+   "end": 41.401
+  },
+  {
+   "text": "escada",
+   "start": 41.441,
+   "end": 41.721
+  },
+  {
+   "text": "do",
+   "start": 41.721,
+   "end": 41.801
+  },
+  {
+   "text": "farol.",
+   "start": 41.841,
+   "end": 42.272
+  },
+  {
+   "text": "Lá",
+   "start": 43.074,
+   "end": 43.181
+  },
+  {
+   "text": "de",
+   "start": 43.181,
+   "end": 43.381
+  },
+  {
+   "text": "cima,",
+   "start": 43.381,
+   "end": 43.728
+  },
+  {
+   "text": "eu",
+   "start": 43.714,
+   "end": 43.794
+  },
+  {
+   "text": "vi",
+   "start": 43.821,
+   "end": 44.021
+  },
+  {
+   "text": "duas",
+   "start": 44.021,
+   "end": 44.261
+  },
+  {
+   "text": "coisas.",
+   "start": 44.301,
+   "end": 44.835
+  },
+  {
+   "text": "Um",
+   "start": 45.514,
+   "end": 45.594
+  },
+  {
+   "text": "navio,",
+   "start": 45.621,
+   "end": 46.261
+  },
+  {
+   "text": "muito",
+   "start": 46.261,
+   "end": 46.621
+  },
+  {
+   "text": "longe.",
+   "start": 46.741,
+   "end": 47.113
+  },
+  {
+   "text": "E",
+   "start": 47.848,
+   "end": 47.941
+  },
+  {
+   "text": "fumaça",
+   "start": 48.008,
+   "end": 48.341
+  },
+  {
+   "text": "na",
+   "start": 48.381,
+   "end": 48.501
+  },
+  {
+   "text": "mata.",
+   "start": 48.501,
+   "end": 49.021
+  },
+  {
+   "text": "Alguém",
+   "start": 49.021,
+   "end": 49.381
+  },
+  {
+   "text": "mais",
+   "start": 49.381,
+   "end": 49.541
+  },
+  {
+   "text": "estava",
+   "start": 49.581,
+   "end": 49.941
+  },
+  {
+   "text": "vivo.",
+   "start": 49.941,
+   "end": 50.407
+  },
+  {
+   "text": "Eu",
+   "start": 51.441,
+   "end": 51.561
+  },
+  {
+   "text": "só",
+   "start": 51.561,
+   "end": 51.681
+  },
+  {
+   "text": "tenho",
+   "start": 51.681,
+   "end": 51.881
+  },
+  {
+   "text": "um",
+   "start": 51.921,
+   "end": 52.041
+  },
+  {
+   "text": "tiro.",
+   "start": 52.081,
+   "end": 52.5
+  },
+  {
+   "text": "Atiro",
+   "start": 53.241,
+   "end": 53.521
+  },
+  {
+   "text": "pro",
+   "start": 53.561,
+   "end": 53.681
+  },
+  {
+   "text": "navio...",
+   "start": 53.761,
+   "end": 54.361
+  },
+  {
+   "text": "ou",
+   "start": 54.361,
+   "end": 54.481
+  },
+  {
+   "text": "corro",
+   "start": 54.521,
+   "end": 54.721
+  },
+  {
+   "text": "até",
+   "start": 54.721,
+   "end": 54.841
+  },
+  {
+   "text": "a",
+   "start": 54.841,
+   "end": 54.921
+  },
+  {
+   "text": "fumaça?",
+   "start": 54.921,
+   "end": 55.474
+  },
+  {
+   "text": "O",
+   "start": 56.831,
+   "end": 56.911
+  },
+  {
+   "text": "que",
+   "start": 56.881,
+   "end": 56.961
+  },
+  {
+   "text": "você",
+   "start": 56.961,
+   "end": 57.201
+  },
+  {
+   "text": "faria?",
+   "start": 57.241,
+   "end": 57.721
+  },
+  {
+   "text": "Comenta",
+   "start": 57.721,
+   "end": 58.081
+  },
+  {
+   "text": "aí!",
+   "start": 58.081,
+   "end": 58.449
+  }
+ ]
+}

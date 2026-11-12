@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>O Farol da Maré</title>
+<style>
+  @font-face { font-family: "Lilita One"; src: url("../node_modules/@fontsource/lilita-one/files/lilita-one-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-024F; }
+  @font-face { font-family: "Lilita One"; src: url("../node_modules/@fontsource/lilita-one/files/lilita-one-latin-400-normal.woff2") format("woff2"); }
+  html, body { margin: 0; background: #000; color: #fff; font-family: sans-serif; }
+  #out { display: block; margin: 0 auto; max-height: 100vh; width: auto; }
+  #ui { position: fixed; left: 8px; bottom: 8px; display: flex; gap: 8px; align-items: center; }
+</style>
+<script type="importmap">
+{ "imports": { "three": "../node_modules/three/build/three.module.js", "three/addons/": "../node_modules/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<canvas id="out"></canvas>
+<div id="ui"><button id="play">▶ tocar</button><input id="seek" type="range" min="0" max="62" step="0.01" value="0" style="width:60vw"><span id="time"></span></div>
+<audio id="aud" src="../build/narracao.wav"></audio>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
