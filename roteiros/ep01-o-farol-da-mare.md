@@ -23,7 +23,7 @@ na mata, sinal de que mais alguém está vivo. Ele só tem um tiro e o público 
 | 6 | 0:17–0:21 | Nadei a noite inteira, até sentir **AREIA**. | 30% | Noite, Davi nadando com travelling lateral. Corte para as mãos tocando a areia e ele se arrastando na praia. |
 | 7 | 0:21–0:24 | Era uma ilha que **não existia** em nenhum mapa. | 40% | Amanhecer. Câmera recua de Davi até revelar a ilha inteira, com o farol no topo. |
 | 8 | 0:24–0:27 | No alto, um **FAROL** abandonado. | 45% | Davi sobe a trilha. Câmera baixa olhando o farol rachado, com gaivotas. |
-| 9 | 0:27–0:31 | Lá dentro: água, comida... e um **sinalizador** com **UM** tiro. | 60% | Davi abre baús, a lanterna acende, ele pega a pistola sinalizadora e o contador mostra "1". |
+| 9 | 0:27–0:31 | Lá dentro: água, comida... e um **sinalizador de socorro**. Com **UM** tiro só. | 60% | Davi abre baús, a lanterna acende, ele pega a pistola sinalizadora e o contador mostra "1". |
 | 10 | 0:31–0:35 | Na parede, alguém riscou **42 DIAS**. | 55% | Câmera percorre a parede cheia de riscos. Zoom no número. |
 | 11 | 0:35–0:38 | E escreveu: "**NÃO CONFIE NA MARÉ**." | 50% | Zoom dramático na frase, a luz pisca e o rosto de Davi muda para susto. |
 | 12 | 0:38–0:42 | No dia seguinte, a maré **ENGOLIU** a praia. | 30% | A água avança rápido sobre a areia, as palmeiras somem e a câmera recua com ela. |
@@ -31,17 +31,17 @@ na mata, sinal de que mais alguém está vivo. Ele só tem um tiro e o público 
 | 14 | 0:45–0:48 | Lá de cima, eu vi **DUAS** coisas. | 25% | Davi sai na varanda do farol. Câmera em 360° com vento. |
 | 15 | 0:48–0:51 | Um **NAVIO**, muito longe. | 25% | Ponto de vista de Davi: navio pequeno no horizonte, zoom tremido. |
 | 16 | 0:51–0:55 | E **FUMAÇA** na mata. Alguém mais estava vivo. | 25% | Câmera gira para o outro lado e mostra fumaça subindo das árvores, que a água já começa a cercar. |
-| 17 | 0:55–0:58 | Eu só tenho **UM TIRO**. | 15% | Close no sinalizador na mão de Davi, a barra pisca vermelha e o som de coração aumenta. |
-| 18 | 0:58–1:04 | Atiro pro navio... ou corro até a fumaça? | ? | Tela dividida: à esquerda **A) ATIRAR NO NAVIO**, à direita **B) CORRER ATÉ A FUMAÇA**. |
+| 17 | 0:55–0:58 | Eu só tenho **UM TIRO**. | 15% | Davi ergue o sinalizador para o céu (sinal de socorro), a barra pisca vermelha e o som de coração aumenta. |
+| 18 | 0:58–1:04 | Disparo o sinalizador pro navio me ver... ou corro até a fumaça? | ? | Tela dividida: à esquerda **A) DISPARAR O SINALIZADOR**, à direita **B) CORRER ATÉ A FUMAÇA**. |
 | 19 | 1:04–1:07 | **O que você faria?** Comenta aí! | ? | Davi olha para a câmera. Aparecem os textos "COMENTE A ou B" e "Parte 2 em breve". |
 
 ## Narração corrida (para gravar a voz)
 Eu só ia pescar por uma hora. Mas o céu ficou preto em minutos. Uma onda gigante virou meu barco.
 Eu fiquei preso embaixo dele, sem ar. Tirei o colete, mergulhei fundo... e escapei.
 Nadei a noite inteira, até sentir areia. Era uma ilha que não existia em nenhum mapa.
-No alto, um farol abandonado. Lá dentro: água, comida... e um sinalizador com um tiro.
+No alto, um farol abandonado. Lá dentro: água, comida... e um sinalizador de socorro. Com um tiro só.
 Na parede, alguém riscou quarenta e dois dias. E escreveu: "Não confie na maré."
 No dia seguinte, a maré engoliu a praia. Corri pela escada do farol. Lá de cima, eu vi duas coisas.
 Um navio, muito longe. E fumaça na mata. Alguém mais estava vivo.
-Eu só tenho um tiro. Atiro pro navio... ou corro até a fumaça?
+Eu só tenho um tiro. Disparo o sinalizador pro navio me ver... ou corro até a fumaça?
 O que você faria? Comenta aí!

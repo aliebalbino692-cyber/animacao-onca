@@ -1,14 +1,14 @@
 """Monta a narração final (com pausas entre as falas) e o timeline.json com o tempo de cada palavra.
 
 Uso: python3 tools/build_timeline.py
-Entradas: assets/audio/narracao_take1.mp3 e assets/audio/narracao_take1_words.json
+Entradas: assets/audio/narracao_v2_take1.mp3 e assets/audio/narracao_v2_take1_words.json
 Saídas:   build/narracao.wav e src/timeline.json
 """
 import json, re, subprocess, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SRC_MP3 = f"{ROOT}/assets/audio/narracao_take1.mp3"
-WORDS = f"{ROOT}/assets/audio/narracao_take1_words.json"
+SRC_MP3 = f"{ROOT}/assets/audio/narracao_v2_take1.mp3"
+WORDS = f"{ROOT}/assets/audio/narracao_v2_take1_words.json"
 os.makedirs(f"{ROOT}/build", exist_ok=True)
 
 # Cada fala: (primeira palavra, pausa ANTES da fala em segundos)
@@ -18,7 +18,7 @@ LINES = [
     ("Era uma ilha", 1.1), ("No alto", 0.7), ("Lá dentro", 0.8),
     ("Na parede", 0.7), ("E escreveu", 0.7), ("No dia seguinte", 1.1),
     ("Corri pela", 0.5), ("Lá de cima", 0.7), ("Um navio", 0.6),
-    ("E fumaça", 0.6), ("Eu só tenho", 0.9), ("Atiro pro", 0.6),
+    ("E fumaça", 0.6), ("Eu só tenho", 0.9), ("Disparo o", 0.6),
     ("O que você", 1.2),
 ]
 TAIL = 3.5  # tempo final com a tela de escolha

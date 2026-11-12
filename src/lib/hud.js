@@ -8,7 +8,7 @@ const norm = (w) => w.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').rep
 export const KEYWORDS = {
   hora: '#ffd23a', preto: '#b06bff', gigante: '#3fe0ff', preso: '#ff3b3b', ar: '#ff3b3b', escapei: '#45f06a',
   areia: '#ffd23a', ilha: '#45f06a', existia: '#ff4fd8', mapa: '#ff4fd8', farol: '#ffd23a', abandonado: '#ffd23a',
-  sinalizador: '#ff8a1f', tiro: '#ff3b3b', quarenta: '#ffd23a', dois: '#ffd23a', dias: '#ffd23a',
+  sinalizador: '#ff8a1f', socorro: '#ff3b3b', tiro: '#ff3b3b', ver: '#45f06a', quarenta: '#ffd23a', dois: '#ffd23a', dias: '#ffd23a',
   nao: '#ff3b3b', confie: '#ff3b3b', mare: '#3fe0ff', engoliu: '#3fe0ff', duas: '#ffd23a', navio: '#45f06a',
   fumaca: '#ff8a1f', vivo: '#45f06a', faria: '#ffd23a', comenta: '#45f06a',
 };
@@ -200,7 +200,7 @@ export class HUD {
       g.font = `86px ${FONT}`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = '#000'; g.fillText(letter, x, 1566);
       g.font = `56px ${FONT}`; g.fillStyle = '#fff'; g.fillText(l1, x, 1672); g.fillStyle = color; g.fillText(l2, x, 1736);
     };
-    card(270, 'A', 'ATIRAR NO', 'NAVIO', '#45f06a');
+    card(270, 'A', 'DISPARAR O', 'SINALIZADOR', '#45f06a');
     card(810, 'B', 'CORRER ATÉ', 'A FUMAÇA', '#ff8a1f');
     g.restore();
   }

@@ -475,11 +475,13 @@ export function buildShots(w, tl) {
     lighthouseOutside(3.6, 0.7); hero.vest.visible = false;
     w.smoke.update(c.t, SMOKE);
     hero.root.position.set(0, GAL, -3.7); hero.root.rotation.set(0, Math.PI, 0);
-    hero.aim(c.t, -0.1); hero.armR.rotation.z = 0.5; hero.armL.rotation.x = -0.3; hero.face('determined');
+    // ergue o sinalizador para o céu (é um sinal de socorro)
+    const up = easeInOut(range(c.local, 0.15, 0.9));
+    hero.idle(c.t); hero.armR.rotation.x = lerp(-1.2, -2.95, up); hero.armR.rotation.z = lerp(0.4, 0.1, up);
+    hero.armL.rotation.x = -0.3; hero.neck.rotation.x = lerp(0, -0.5, up); hero.face('determined');
     hero.root.updateMatrixWorld(true);
-    const hp = handPos(), hd = head();
-    const look = hp.clone().lerp(hd, 0.35);
-    cam(look.clone().add(V(lerp(-3.2, -2.2, c.u), 0.4, lerp(-2.2, -1.6, c.u))), look, 45, 0.04, c.t);
+    const hd = head();
+    cam(V(lerp(-2.2, -3.0, c.u), GAL + lerp(4.2, 2.6, c.u), lerp(-8.5, -10.5, c.u)), hd.clone().add(V(0, lerp(0.3, 2.2, up), 0)), 50, 0.04, c.t);
     c.fx.redPulse = 0.18 + Math.max(0, Math.sin(c.t * 7.5)) * 0.25;
     c.focus = V(0, GAL, 0);
   });
