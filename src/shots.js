@@ -499,7 +499,7 @@ export function buildShots(w, tl) {
       right: () => cam(V(3, GAL + 3, -2), SMOKE.clone().add(V(0, 7, 0)), lerp(40, 28, z), 0.04, c.t + 3),
     };
     c.fx.split = { k: easeOut(range(c.local, 0, 0.3)) };
-    c.fx.captionY = 1280;
+    c.fx.captionY = 1330;
     c.focus = V(0, GAL, 0);
   });
 
@@ -513,7 +513,7 @@ export function buildShots(w, tl) {
     hero.neck.rotation.x = Math.sin(range(c.local, 1.0, 1.6) * Math.PI) * 0.25; // aceno com a cabeça
     hero.face(c.local < 1.2 ? 'determined' : 'happy');
     const hp = head();
-    cam(V(hp.x + lerp(1.5, 0.6, c.u), hp.y + 0.2, hp.z - lerp(9, 6, easeOut(c.u))), hp.clone().add(V(0, -1.2, 0)), 50, 0.03, c.t);
+    cam(V(hp.x + lerp(1.5, 0.6, c.u), hp.y + 0.2, hp.z - lerp(9, 6, easeOut(c.u))), hp.clone().add(V(0, -0.9, 0)), 50, 0.03, c.t);
     c.fx.cta = { k: easeOut(range(c.local, 0.3, 0.7)), part2: c.t > tl.duration - 2.2 };
     c.fx.black = range(c.t, tl.duration - 0.35, tl.duration);
     c.focus = V(0, GAL, 0);

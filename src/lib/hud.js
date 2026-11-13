@@ -16,7 +16,10 @@ export const KEYWORDS = {
 const ONLY_IN_LINE = { nao: [11], confie: [11] };
 
 export class HUD {
-  constructor(timeline, survivalKeys) {
+  // layout seguro para TikTok/Reels/Shorts: nada importante nos ~200 px do topo,
+  // nos ~420 px de baixo nem na coluna de ícones da direita
+  constructor(timeline, survivalKeys, opts = {}) {
+    this.opts = { tag: 'EP. 1 • O FAROL DA MARÉ', next: 'PARTE 2 EM BREVE!', barY: 250, captionY: 1300, ...opts };
     this.tl = timeline;
     this.keys = survivalKeys; // [[t, valor], ...]
     this.chunks = this.buildChunks();
@@ -83,7 +86,7 @@ export class HUD {
     const v = this.survival(t), unknown = v === null;
     const dr = this.drop(t), sinceDrop = t - dr.at;
     const shake = sinceDrop < 0.5 ? Math.sin(sinceDrop * 70) * 10 * (1 - sinceDrop / 0.5) : 0;
-    const x = 70 + shake, y = 92, w = 940, h = 112;
+    const x = 70 + shake, y = this.opts.barY, w = 940, h = 112;
     g.save();
     g.shadowColor = 'rgba(0,0,0,0.5)'; g.shadowBlur = 18;
     this.rr(g, x, y, w, h, 30); g.fillStyle = 'rgba(12,16,24,0.78)'; g.fill(); g.shadowBlur = 0;
@@ -120,18 +123,20 @@ export class HUD {
     if (sinceDrop < 1.0 && !unknown) {
       const d = dr.delta, a = 1 - sinceDrop;
       g.save(); g.globalAlpha = a; g.font = `72px ${FONT}`; g.textAlign = 'center';
-      g.lineWidth = 12; g.strokeStyle = '#000'; g.strokeText(`${d}%`, 860, 280 + sinceDrop * 60); g.fillStyle = '#ff3b3b'; g.fillText(`${d}%`, 860, 280 + sinceDrop * 60);
+      g.lineWidth = 12; g.strokeStyle = '#000'; const dy = this.opts.barY + 190 + sinceDrop * 60;
+      g.strokeText(`${d}%`, 860, dy); g.fillStyle = '#ff3b3b'; g.fillText(`${d}%`, 860, dy);
       g.restore();
     }
     // tag do episódio
     g.save(); g.font = `34px ${FONT}`; g.textAlign = 'left'; g.globalAlpha = 0.9;
-    g.lineWidth = 8; g.strokeStyle = 'rgba(0,0,0,0.8)'; g.strokeText('EP. 1 • O FAROL DA MARÉ', 84, 244); g.fillStyle = '#fff'; g.fillText('EP. 1 • O FAROL DA MARÉ', 84, 244);
+    g.lineWidth = 8; g.strokeStyle = 'rgba(0,0,0,0.8)'; const ty = this.opts.barY + 152;
+    g.strokeText(this.opts.tag, 84, ty); g.fillStyle = '#fff'; g.fillText(this.opts.tag, 84, ty);
     g.restore();
   }
   captions(g, t, fx) {
     const c = this.chunks.find((ch) => t >= ch.start - 0.02 && t < ch.end);
     if (!c) return;
-    const size = 100, y0 = fx.captionY ?? 1390;
+    const size = 100, y0 = fx.captionY ?? this.opts.captionY;
     g.save(); g.font = `${size}px ${FONT}`; g.textAlign = 'left'; g.textBaseline = 'middle';
     const items = c.words.map((w) => {
       const n = norm(w.text);
@@ -140,20 +145,20 @@ export class HUD {
       if (c.line === 11 && (n === 'na' || n === 'mare')) color = '#ff3b3b';
       if (c.line === 17 && n === 'um') color = '#ff3b3b';
       const text = color ? w.text.toUpperCase() : w.text;
-      return { w, text, color, width: g.measureText(text).width * (color ? 1.12 : 1) + 28 };
+      return { w, text, color, width: g.measureText(text).width * (color ? 1.12 : 1) + 40 };
     });
     // quebra em linhas de no máximo 920px
     const rows = [[]]; let rw = 0;
-    for (const it of items) { if (rw + it.width > 940 && rows[rows.length - 1].length) { rows.push([]); rw = 0; } rows[rows.length - 1].push(it); rw += it.width; }
+    for (const it of items) { if (rw + it.width > 820 && rows[rows.length - 1].length) { rows.push([]); rw = 0; } rows[rows.length - 1].push(it); rw += it.width; }
     const pop = easeOut(range(t, c.start - 0.02, c.start + 0.12));
     rows.forEach((row, ri) => {
-      const total = row.reduce((s, it) => s + it.width, 0) - 28;
+      const total = row.reduce((s, it) => s + it.width, 0) - 40;
       let x = 540 - total / 2; const y = y0 + ri * 112 - (rows.length - 1) * 56;
       for (const it of row) {
         const active = t >= it.w.start - 0.03;
         const wp = easeOut(range(t, it.w.start - 0.03, it.w.start + 0.1));
         const sc = (it.color ? 1.12 : 1) * (0.85 + 0.15 * pop) * (active ? 1 + 0.12 * Math.sin(Math.PI * wp) : 1);
-        const ww = g.measureText(it.text).width, slot = it.width - 28;
+        const ww = g.measureText(it.text).width, slot = it.width - 40;
         g.save(); g.translate(x + slot / 2, y); g.scale(sc, sc); g.globalAlpha = active ? 1 : 0.0;
         g.lineJoin = 'round'; g.lineWidth = 20; g.strokeStyle = '#000'; g.strokeText(it.text, -ww / 2, 4);
         g.fillStyle = it.color || '#ffffff'; g.fillText(it.text, -ww / 2, 0);
@@ -186,34 +191,50 @@ export class HUD {
   title(g, k) {
     g.save(); g.globalAlpha = k; g.textAlign = 'center'; g.textBaseline = 'middle';
     g.font = `120px ${FONT}`; g.lineJoin = 'round';
-    g.lineWidth = 24; g.strokeStyle = '#000'; g.strokeText('O FAROL', 540, 470); g.strokeText('DA MARÉ', 540, 600);
-    g.fillStyle = '#ffd23a'; g.fillText('O FAROL', 540, 470); g.fillStyle = '#3fe0ff'; g.fillText('DA MARÉ', 540, 600);
+    g.lineWidth = 24; g.strokeStyle = '#000'; g.strokeText('O FAROL', 540, 540); g.strokeText('DA MARÉ', 540, 670);
+    g.fillStyle = '#ffd23a'; g.fillText('O FAROL', 540, 540); g.fillStyle = '#3fe0ff'; g.fillText('DA MARÉ', 540, 670);
     g.restore();
   }
   split(g, t, s) {
-    // divisória e rótulos A/B (as duas câmeras já foram desenhadas na tela)
+    // tela dividida: cada metade tingida com a cor da opção e o cartão no MEIO da tela
+    const A = s.a || { l1: 'DISPARAR O', l2: 'SINALIZADOR', color: '#45f06a' };
+    const B = s.b || { l1: 'CORRER ATÉ', l2: 'A FUMAÇA', color: '#ff8a1f' };
     g.save(); g.globalAlpha = s.k;
-    g.fillStyle = '#000'; g.fillRect(534, 0, 12, 1920);
-    const card = (x, letter, l1, l2, color) => {
-      this.rr(g, x - 240, 1560, 480, 230, 34); g.fillStyle = 'rgba(10,12,18,0.85)'; g.fill(); g.lineWidth = 7; g.strokeStyle = color; g.stroke();
-      g.beginPath(); g.arc(x, 1560, 62, 0, 7); g.fillStyle = color; g.fill(); g.lineWidth = 7; g.strokeStyle = '#000'; g.stroke();
-      g.font = `86px ${FONT}`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = '#000'; g.fillText(letter, x, 1566);
-      g.font = `56px ${FONT}`; g.fillStyle = '#fff'; g.fillText(l1, x, 1672); g.fillStyle = color; g.fillText(l2, x, 1736);
+    const tint = (x0, color) => {
+      const gr = g.createLinearGradient(0, 0, 0, 1920);
+      gr.addColorStop(0, hexA(color, 0.12)); gr.addColorStop(0.5, hexA(color, 0.38)); gr.addColorStop(1, hexA(color, 0.12));
+      g.fillStyle = gr; g.fillRect(x0, 0, 540, 1920);
+      g.fillStyle = color; g.fillRect(x0 + (x0 ? 6 : 0), 0, 10, 1920); // borda colorida
     };
-    card(270, 'A', 'DISPARAR O', 'SINALIZADOR', '#45f06a');
-    card(810, 'B', 'CORRER ATÉ', 'A FUMAÇA', '#ff8a1f');
+    tint(0, A.color); tint(540, B.color);
+    g.fillStyle = '#000'; g.fillRect(532, 0, 16, 1920);
+    const pulse = (ph) => 1 + Math.max(0, Math.sin(t * 5 + ph)) * 0.05;
+    const card = (x, letter, o, ph) => {
+      const cy = 960;
+      g.save(); g.translate(x, cy); g.scale(pulse(ph), pulse(ph));
+      this.rr(g, -235, -120, 470, 250, 36); g.fillStyle = 'rgba(10,12,18,0.88)'; g.fill(); g.lineWidth = 9; g.strokeStyle = o.color; g.stroke();
+      g.beginPath(); g.arc(0, -120, 70, 0, 7); g.fillStyle = o.color; g.fill(); g.lineWidth = 8; g.strokeStyle = '#000'; g.stroke();
+      g.font = `96px ${FONT}`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = '#000'; g.fillText(letter, 0, -114);
+      g.font = `58px ${FONT}`; g.fillStyle = '#fff'; g.fillText(o.l1, 0, 0); g.fillStyle = o.color; g.fillText(o.l2, 0, 66);
+      g.restore();
+    };
+    card(270, 'A', A, 0); card(810, 'B', B, Math.PI);
     g.restore();
   }
   cta(g, t, c) {
     g.save(); g.globalAlpha = c.k; g.textAlign = 'center'; g.textBaseline = 'middle';
     const pulse = 1 + Math.sin(t * 6) * 0.04;
-    g.translate(540, 1650); g.scale(pulse, pulse);
+    g.translate(540, c.y ?? 1060); g.scale(pulse, pulse);
     this.rr(g, -430, -110, 860, 220, 40); g.fillStyle = 'rgba(10,12,18,0.88)'; g.fill(); g.lineWidth = 7; g.strokeStyle = '#ffd23a'; g.stroke();
     g.font = `66px ${FONT}`; g.fillStyle = '#fff'; g.fillText('COMENTE', -190, -42);
     g.fillStyle = '#45f06a'; g.fillText('A', 30, -42); g.fillStyle = '#fff'; g.fillText('OU', 130, -42); g.fillStyle = '#ff8a1f'; g.fillText('B', 230, -42);
-    g.font = `46px ${FONT}`; g.fillStyle = '#ffd23a'; g.fillText(c.part2 ? 'PARTE 2 EM BREVE!' : 'O QUE VOCÊ FARIA?', 0, 50);
+    g.font = `46px ${FONT}`; g.fillStyle = '#ffd23a'; g.fillText(c.part2 ? this.opts.next : 'O QUE VOCÊ FARIA?', 0, 50);
     g.restore();
   }
+}
+function hexA(hex, a) {
+  const n = parseInt(hex.slice(1), 16);
+  return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`;
 }
 function shade(hex) {
   const n = parseInt(hex.slice(1), 16), f = 0.65;
