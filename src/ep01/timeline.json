@@ -4,6 +4,7 @@
   {
    "index": 1,
    "text": "Eu só ia pescar por uma hora.",
+   "voice": 0,
    "start": 1.2,
    "speechEnd": 2.981,
    "end": 3.781
@@ -11,6 +12,7 @@
   {
    "index": 2,
    "text": "Mas o céu ficou preto em minutos.",
+   "voice": 0,
    "start": 3.781,
    "speechEnd": 5.455,
    "end": 6.255
@@ -18,6 +20,7 @@
   {
    "index": 3,
    "text": "Uma onda gigante virou meu barco.",
+   "voice": 0,
    "start": 6.255,
    "speechEnd": 8.811,
    "end": 10.211
@@ -25,6 +28,7 @@
   {
    "index": 4,
    "text": "Eu fiquei preso embaixo dele, sem ar.",
+   "voice": 0,
    "start": 10.211,
    "speechEnd": 12.367,
    "end": 13.267
@@ -32,6 +36,7 @@
   {
    "index": 5,
    "text": "Tirei o colete, mergulhei fundo... e escapei.",
+   "voice": 0,
    "start": 13.267,
    "speechEnd": 16.18,
    "end": 16.88
@@ -39,6 +44,7 @@
   {
    "index": 6,
    "text": "Nadei a noite inteira, até sentir areia.",
+   "voice": 0,
    "start": 16.88,
    "speechEnd": 19.19,
    "end": 20.29
@@ -46,6 +52,7 @@
   {
    "index": 7,
    "text": "Era uma ilha que não existia em nenhum mapa.",
+   "voice": 0,
    "start": 20.29,
    "speechEnd": 22.639,
    "end": 23.339
@@ -53,6 +60,7 @@
   {
    "index": 8,
    "text": "No alto, um farol abandonado.",
+   "voice": 0,
    "start": 23.339,
    "speechEnd": 25.344,
    "end": 26.144
@@ -60,6 +68,7 @@
   {
    "index": 9,
    "text": "Lá dentro: água, comida... e um sinalizador de socorro. Com um tiro só.",
+   "voice": 0,
    "start": 26.144,
    "speechEnd": 30.905,
    "end": 31.605
@@ -67,6 +76,7 @@
   {
    "index": 10,
    "text": "Na parede, alguém riscou quarenta e dois dias.",
+   "voice": 0,
    "start": 31.605,
    "speechEnd": 34.442,
    "end": 35.142
@@ -74,6 +84,7 @@
   {
    "index": 11,
    "text": "E escreveu: \"Não confie na maré.\"",
+   "voice": 0,
    "start": 35.142,
    "speechEnd": 37.54,
    "end": 38.64
@@ -81,6 +92,7 @@
   {
    "index": 12,
    "text": "No dia seguinte, a maré engoliu a praia.",
+   "voice": 0,
    "start": 38.64,
    "speechEnd": 40.856,
    "end": 41.356
@@ -88,6 +100,7 @@
   {
    "index": 13,
    "text": "Corri pela escada do farol.",
+   "voice": 0,
    "start": 41.356,
    "speechEnd": 42.807,
    "end": 43.507
@@ -95,6 +108,7 @@
   {
    "index": 14,
    "text": "Lá de cima, eu vi duas coisas.",
+   "voice": 0,
    "start": 43.507,
    "speechEnd": 45.398,
    "end": 45.998
@@ -102,6 +116,7 @@
   {
    "index": 15,
    "text": "Um navio, muito longe.",
+   "voice": 0,
    "start": 45.998,
    "speechEnd": 47.666,
    "end": 48.266
@@ -109,6 +124,7 @@
   {
    "index": 16,
    "text": "E fumaça na mata. Alguém mais estava vivo.",
+   "voice": 0,
    "start": 48.266,
    "speechEnd": 51.092,
    "end": 51.992
@@ -116,6 +132,7 @@
   {
    "index": 17,
    "text": "Eu só tenho um tiro.",
+   "voice": 0,
    "start": 51.992,
    "speechEnd": 53.347,
    "end": 53.947
@@ -123,6 +140,7 @@
   {
    "index": 18,
    "text": "Disparo o sinalizador pro navio me ver... ou corro até a fumaça?",
+   "voice": 0,
    "start": 53.947,
    "speechEnd": 57.264,
    "end": 58.464
@@ -130,6 +148,7 @@
   {
    "index": 19,
    "text": "O que você faria? Comenta aí!",
+   "voice": 0,
    "start": 58.464,
    "speechEnd": 60.121,
    "end": 63.621
@@ -139,687 +158,824 @@
   {
    "text": "Eu",
    "start": 1.236,
-   "end": 1.316
+   "end": 1.316,
+   "voice": 0
   },
   {
    "text": "só",
    "start": 1.32,
-   "end": 1.44
+   "end": 1.44,
+   "voice": 0
   },
   {
    "text": "ia",
    "start": 1.48,
-   "end": 1.6
+   "end": 1.6,
+   "voice": 0
   },
   {
    "text": "pescar",
    "start": 1.613,
-   "end": 1.92
+   "end": 1.92,
+   "voice": 0
   },
   {
    "text": "por",
    "start": 1.92,
-   "end": 2.0
+   "end": 2.0,
+   "voice": 0
   },
   {
    "text": "uma",
    "start": 2.04,
-   "end": 2.24
+   "end": 2.24,
+   "voice": 0
   },
   {
    "text": "hora.",
    "start": 2.28,
-   "end": 2.76
+   "end": 2.76,
+   "voice": 0
   },
   {
    "text": "Mas",
    "start": 3.781,
-   "end": 3.92
+   "end": 3.92,
+   "voice": 0
   },
   {
    "text": "o",
    "start": 3.92,
-   "end": 4.0
+   "end": 4.0,
+   "voice": 0
   },
   {
    "text": "céu",
    "start": 4.0,
-   "end": 4.16
+   "end": 4.16,
+   "voice": 0
   },
   {
    "text": "ficou",
    "start": 4.2,
-   "end": 4.4
+   "end": 4.4,
+   "voice": 0
   },
   {
    "text": "preto",
    "start": 4.44,
-   "end": 4.64
+   "end": 4.64,
+   "voice": 0
   },
   {
    "text": "em",
    "start": 4.64,
-   "end": 4.72
+   "end": 4.72,
+   "voice": 0
   },
   {
    "text": "minutos.",
    "start": 4.76,
-   "end": 5.455
+   "end": 5.455,
+   "voice": 0
   },
   {
    "text": "Uma",
    "start": 6.44,
-   "end": 6.64
+   "end": 6.64,
+   "voice": 0
   },
   {
    "text": "onda",
    "start": 6.68,
-   "end": 6.8
+   "end": 6.8,
+   "voice": 0
   },
   {
    "text": "gigante",
    "start": 6.84,
-   "end": 7.36
+   "end": 7.36,
+   "voice": 0
   },
   {
    "text": "virou",
    "start": 7.4,
-   "end": 7.56
+   "end": 7.56,
+   "voice": 0
   },
   {
    "text": "meu",
    "start": 7.56,
-   "end": 7.72
+   "end": 7.72,
+   "voice": 0
   },
   {
    "text": "barco.",
    "start": 7.72,
-   "end": 8.32
+   "end": 8.32,
+   "voice": 0
   },
   {
    "text": "Eu",
    "start": 10.4,
-   "end": 10.52
+   "end": 10.52,
+   "voice": 0
   },
   {
    "text": "fiquei",
    "start": 10.52,
-   "end": 10.76
+   "end": 10.76,
+   "voice": 0
   },
   {
    "text": "preso",
    "start": 10.8,
-   "end": 10.947
+   "end": 10.947,
+   "voice": 0
   },
   {
    "text": "embaixo",
    "start": 10.933,
-   "end": 11.24
+   "end": 11.24,
+   "voice": 0
   },
   {
    "text": "dele,",
    "start": 11.28,
-   "end": 11.6
+   "end": 11.6,
+   "voice": 0
   },
   {
    "text": "sem",
    "start": 11.6,
-   "end": 11.8
+   "end": 11.8,
+   "voice": 0
   },
   {
    "text": "ar.",
    "start": 11.84,
-   "end": 12.367
+   "end": 12.367,
+   "voice": 0
   },
   {
    "text": "Tirei",
    "start": 13.3,
-   "end": 13.527
+   "end": 13.527,
+   "voice": 0
   },
   {
    "text": "o",
    "start": 13.513,
-   "end": 13.593
+   "end": 13.593,
+   "voice": 0
   },
   {
    "text": "colete,",
    "start": 13.62,
-   "end": 14.06
+   "end": 14.06,
+   "voice": 0
   },
   {
    "text": "mergulhei",
    "start": 14.1,
-   "end": 14.54
+   "end": 14.54,
+   "voice": 0
   },
   {
    "text": "fundo...",
    "start": 14.58,
-   "end": 15.22
+   "end": 15.22,
+   "voice": 0
   },
   {
    "text": "e",
    "start": 15.22,
-   "end": 15.3
+   "end": 15.3,
+   "voice": 0
   },
   {
    "text": "escapei.",
    "start": 15.3,
-   "end": 16.18
+   "end": 16.18,
+   "voice": 0
   },
   {
    "text": "Nadei",
    "start": 16.88,
-   "end": 17.16
+   "end": 17.16,
+   "voice": 0
   },
   {
    "text": "a",
    "start": 17.16,
-   "end": 17.24
+   "end": 17.24,
+   "voice": 0
   },
   {
    "text": "noite",
    "start": 17.24,
-   "end": 17.48
+   "end": 17.48,
+   "voice": 0
   },
   {
    "text": "inteira,",
    "start": 17.6,
-   "end": 18.0
+   "end": 18.0,
+   "voice": 0
   },
   {
    "text": "até",
    "start": 18.08,
-   "end": 18.32
+   "end": 18.32,
+   "voice": 0
   },
   {
    "text": "sentir",
    "start": 18.32,
-   "end": 18.6
+   "end": 18.6,
+   "voice": 0
   },
   {
    "text": "areia.",
    "start": 18.64,
-   "end": 19.19
+   "end": 19.19,
+   "voice": 0
   },
   {
    "text": "Era",
    "start": 20.46,
-   "end": 20.58
+   "end": 20.58,
+   "voice": 0
   },
   {
    "text": "uma",
    "start": 20.62,
-   "end": 20.74
+   "end": 20.74,
+   "voice": 0
   },
   {
    "text": "ilha",
    "start": 20.78,
-   "end": 20.98
+   "end": 20.98,
+   "voice": 0
   },
   {
    "text": "que",
    "start": 21.02,
-   "end": 21.14
+   "end": 21.14,
+   "voice": 0
   },
   {
    "text": "não",
    "start": 21.127,
-   "end": 21.22
+   "end": 21.22,
+   "voice": 0
   },
   {
    "text": "existia",
    "start": 21.34,
-   "end": 21.62
+   "end": 21.62,
+   "voice": 0
   },
   {
    "text": "em",
    "start": 21.62,
-   "end": 21.7
+   "end": 21.7,
+   "voice": 0
   },
   {
    "text": "nenhum",
    "start": 21.74,
-   "end": 22.1
+   "end": 22.1,
+   "voice": 0
   },
   {
    "text": "mapa.",
    "start": 22.22,
-   "end": 22.639
+   "end": 22.639,
+   "voice": 0
   },
   {
    "text": "No",
    "start": 23.533,
-   "end": 23.613
+   "end": 23.613,
+   "voice": 0
   },
   {
    "text": "alto,",
    "start": 23.64,
-   "end": 24.187
+   "end": 24.187,
+   "voice": 0
   },
   {
    "text": "um",
    "start": 24.173,
-   "end": 24.253
+   "end": 24.253,
+   "voice": 0
   },
   {
    "text": "farol",
    "start": 24.28,
-   "end": 24.56
+   "end": 24.56,
+   "voice": 0
   },
   {
    "text": "abandonado.",
    "start": 24.6,
-   "end": 25.344
+   "end": 25.344,
+   "voice": 0
   },
   {
    "text": "Lá",
    "start": 26.333,
-   "end": 26.48
+   "end": 26.48,
+   "voice": 0
   },
   {
    "text": "dentro:",
    "start": 26.56,
-   "end": 27.12
+   "end": 27.12,
+   "voice": 0
   },
   {
    "text": "água,",
    "start": 27.16,
-   "end": 27.68
+   "end": 27.68,
+   "voice": 0
   },
   {
    "text": "comida...",
    "start": 27.72,
-   "end": 28.34
+   "end": 28.34,
+   "voice": 0
   },
   {
    "text": "e",
    "start": 28.32,
-   "end": 28.4
+   "end": 28.4,
+   "voice": 0
   },
   {
    "text": "um",
    "start": 28.36,
-   "end": 28.48
+   "end": 28.48,
+   "voice": 0
   },
   {
    "text": "sinalizador",
    "start": 28.52,
-   "end": 29.04
+   "end": 29.04,
+   "voice": 0
   },
   {
    "text": "de",
    "start": 29.04,
-   "end": 29.12
+   "end": 29.12,
+   "voice": 0
   },
   {
    "text": "socorro.",
    "start": 29.16,
-   "end": 29.88
+   "end": 29.88,
+   "voice": 0
   },
   {
    "text": "Com",
    "start": 29.88,
-   "end": 30.0
+   "end": 30.0,
+   "voice": 0
   },
   {
    "text": "um",
    "start": 30.04,
-   "end": 30.16
+   "end": 30.16,
+   "voice": 0
   },
   {
    "text": "tiro",
    "start": 30.2,
-   "end": 30.48
+   "end": 30.48,
+   "voice": 0
   },
   {
    "text": "só.",
    "start": 30.52,
-   "end": 30.905
+   "end": 30.905,
+   "voice": 0
   },
   {
    "text": "Na",
    "start": 31.78,
-   "end": 31.9
+   "end": 31.9,
+   "voice": 0
   },
   {
    "text": "parede,",
    "start": 32.02,
-   "end": 32.487
+   "end": 32.487,
+   "voice": 0
   },
   {
    "text": "alguém",
    "start": 32.473,
-   "end": 32.7
+   "end": 32.7,
+   "voice": 0
   },
   {
    "text": "riscou",
    "start": 32.74,
-   "end": 33.02
+   "end": 33.02,
+   "voice": 0
   },
   {
    "text": "quarenta",
    "start": 33.06,
-   "end": 33.473
+   "end": 33.473,
+   "voice": 0
   },
   {
    "text": "e",
    "start": 33.487,
-   "end": 33.58
+   "end": 33.58,
+   "voice": 0
   },
   {
    "text": "dois",
    "start": 33.58,
-   "end": 33.82
+   "end": 33.82,
+   "voice": 0
   },
   {
    "text": "dias.",
    "start": 33.86,
-   "end": 34.442
+   "end": 34.442,
+   "voice": 0
   },
   {
    "text": "E",
    "start": 35.2,
-   "end": 35.28
+   "end": 35.28,
+   "voice": 0
   },
   {
    "text": "escreveu:",
    "start": 35.28,
-   "end": 36.16
+   "end": 36.16,
+   "voice": 0
   },
   {
    "text": "\"Não",
    "start": 36.16,
-   "end": 36.36
+   "end": 36.36,
+   "voice": 0
   },
   {
    "text": "confie",
    "start": 36.4,
-   "end": 36.84
+   "end": 36.84,
+   "voice": 0
   },
   {
    "text": "na",
    "start": 36.88,
-   "end": 37.0
+   "end": 37.0,
+   "voice": 0
   },
   {
    "text": "maré.\"",
    "start": 37.04,
-   "end": 37.54
+   "end": 37.54,
+   "voice": 0
   },
   {
    "text": "No",
    "start": 38.78,
-   "end": 38.9
+   "end": 38.9,
+   "voice": 0
   },
   {
    "text": "dia",
    "start": 38.94,
-   "end": 39.06
+   "end": 39.06,
+   "voice": 0
   },
   {
    "text": "seguinte,",
    "start": 39.1,
-   "end": 39.58
+   "end": 39.58,
+   "voice": 0
   },
   {
    "text": "a",
    "start": 39.58,
-   "end": 39.66
+   "end": 39.66,
+   "voice": 0
   },
   {
    "text": "maré",
    "start": 39.66,
-   "end": 39.86
+   "end": 39.86,
+   "voice": 0
   },
   {
    "text": "engoliu",
    "start": 39.9,
-   "end": 40.26
+   "end": 40.26,
+   "voice": 0
   },
   {
    "text": "a",
    "start": 40.26,
-   "end": 40.34
+   "end": 40.34,
+   "voice": 0
   },
   {
    "text": "praia.",
    "start": 40.38,
-   "end": 40.856
+   "end": 40.856,
+   "voice": 0
   },
   {
    "text": "Corri",
    "start": 41.52,
-   "end": 41.72
+   "end": 41.72,
+   "voice": 0
   },
   {
    "text": "pela",
    "start": 41.76,
-   "end": 41.88
+   "end": 41.88,
+   "voice": 0
   },
   {
    "text": "escada",
    "start": 41.92,
-   "end": 42.2
+   "end": 42.2,
+   "voice": 0
   },
   {
    "text": "do",
    "start": 42.24,
-   "end": 42.36
+   "end": 42.36,
+   "voice": 0
   },
   {
    "text": "farol.",
    "start": 42.4,
-   "end": 42.807
+   "end": 42.807,
+   "voice": 0
   },
   {
    "text": "Lá",
    "start": 43.633,
-   "end": 43.74
+   "end": 43.74,
+   "voice": 0
   },
   {
    "text": "de",
    "start": 43.74,
-   "end": 43.86
+   "end": 43.86,
+   "voice": 0
   },
   {
    "text": "cima,",
    "start": 43.9,
-   "end": 44.287
+   "end": 44.287,
+   "voice": 0
   },
   {
    "text": "eu",
    "start": 44.273,
-   "end": 44.353
+   "end": 44.353,
+   "voice": 0
   },
   {
    "text": "vi",
    "start": 44.38,
-   "end": 44.58
+   "end": 44.58,
+   "voice": 0
   },
   {
    "text": "duas",
    "start": 44.58,
-   "end": 44.82
+   "end": 44.82,
+   "voice": 0
   },
   {
    "text": "coisas.",
    "start": 44.86,
-   "end": 45.398
+   "end": 45.398,
+   "voice": 0
   },
   {
    "text": "Um",
    "start": 46.1,
-   "end": 46.22
+   "end": 46.22,
+   "voice": 0
   },
   {
    "text": "navio,",
    "start": 46.34,
-   "end": 46.82
+   "end": 46.82,
+   "voice": 0
   },
   {
    "text": "muito",
    "start": 46.82,
-   "end": 47.18
+   "end": 47.18,
+   "voice": 0
   },
   {
    "text": "longe.",
    "start": 47.3,
-   "end": 47.666
+   "end": 47.666,
+   "voice": 0
   },
   {
    "text": "E",
    "start": 48.407,
-   "end": 48.5
+   "end": 48.5,
+   "voice": 0
   },
   {
    "text": "fumaça",
    "start": 48.5,
-   "end": 48.98
+   "end": 48.98,
+   "voice": 0
   },
   {
    "text": "na",
    "start": 49.02,
-   "end": 49.14
+   "end": 49.14,
+   "voice": 0
   },
   {
    "text": "mata.",
    "start": 49.14,
-   "end": 49.753
+   "end": 49.753,
+   "voice": 0
   },
   {
    "text": "Alguém",
    "start": 49.767,
-   "end": 50.02
+   "end": 50.02,
+   "voice": 0
   },
   {
    "text": "mais",
    "start": 50.06,
-   "end": 50.26
+   "end": 50.26,
+   "voice": 0
   },
   {
    "text": "estava",
    "start": 50.3,
-   "end": 50.66
+   "end": 50.66,
+   "voice": 0
   },
   {
    "text": "vivo.",
    "start": 50.66,
-   "end": 51.092
+   "end": 51.092,
+   "voice": 0
   },
   {
    "text": "Eu",
    "start": 52.16,
-   "end": 52.28
+   "end": 52.28,
+   "voice": 0
   },
   {
    "text": "só",
    "start": 52.28,
-   "end": 52.4
+   "end": 52.4,
+   "voice": 0
   },
   {
    "text": "tenho",
    "start": 52.4,
-   "end": 52.68
+   "end": 52.68,
+   "voice": 0
   },
   {
    "text": "um",
    "start": 52.76,
-   "end": 52.92
+   "end": 52.92,
+   "voice": 0
   },
   {
    "text": "tiro.",
    "start": 52.92,
-   "end": 53.347
+   "end": 53.347,
+   "voice": 0
   },
   {
    "text": "Disparo",
    "start": 54.2,
-   "end": 54.48
+   "end": 54.48,
+   "voice": 0
   },
   {
    "text": "o",
    "start": 54.467,
-   "end": 54.547
+   "end": 54.547,
+   "voice": 0
   },
   {
    "text": "sinalizador",
    "start": 54.52,
-   "end": 55.04
+   "end": 55.04,
+   "voice": 0
   },
   {
    "text": "pro",
    "start": 55.08,
-   "end": 55.2
+   "end": 55.2,
+   "voice": 0
   },
   {
    "text": "navio",
    "start": 55.24,
-   "end": 55.44
+   "end": 55.44,
+   "voice": 0
   },
   {
    "text": "me",
    "start": 55.48,
-   "end": 55.6
+   "end": 55.6,
+   "voice": 0
   },
   {
    "text": "ver...",
    "start": 55.64,
-   "end": 56.12
+   "end": 56.12,
+   "voice": 0
   },
   {
    "text": "ou",
    "start": 56.12,
-   "end": 56.24
+   "end": 56.24,
+   "voice": 0
   },
   {
    "text": "corro",
    "start": 56.28,
-   "end": 56.48
+   "end": 56.48,
+   "voice": 0
   },
   {
    "text": "até",
    "start": 56.52,
-   "end": 56.66
+   "end": 56.66,
+   "voice": 0
   },
   {
    "text": "a",
    "start": 56.64,
-   "end": 56.72
+   "end": 56.72,
+   "voice": 0
   },
   {
    "text": "fumaça?",
    "start": 56.68,
-   "end": 57.264
+   "end": 57.264,
+   "voice": 0
   },
   {
    "text": "O",
    "start": 58.59,
-   "end": 58.67
+   "end": 58.67,
+   "voice": 0
   },
   {
    "text": "que",
    "start": 58.64,
-   "end": 58.72
+   "end": 58.72,
+   "voice": 0
   },
   {
    "text": "você",
    "start": 58.72,
-   "end": 58.96
+   "end": 58.96,
+   "voice": 0
   },
   {
    "text": "faria?",
    "start": 58.96,
-   "end": 59.493
+   "end": 59.493,
+   "voice": 0
   },
   {
    "text": "Comenta",
    "start": 59.507,
-   "end": 59.76
+   "end": 59.76,
+   "voice": 0
   },
   {
    "text": "aí!",
    "start": 59.8,
-   "end": 60.121
+   "end": 60.121,
+   "voice": 0
   }
  ]
 }

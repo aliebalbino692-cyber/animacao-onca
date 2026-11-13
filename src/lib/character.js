@@ -4,7 +4,7 @@ import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.j
 
 const SKIN = '#f2c189';
 
-function faceTexture(kind) {
+function faceTexture(kind, lashes = false) {
   const c = document.createElement('canvas');
   c.width = c.height = 256;
   const g = c.getContext('2d');
@@ -60,6 +60,10 @@ function faceTexture(kind) {
       brow(68, 82, 106, 80); brow(150, 80, 188, 82);
       g.lineWidth = 9; g.beginPath(); g.moveTo(102, 172); g.quadraticCurveTo(128, 182, 154, 172); g.stroke();
   }
+  if (lashes) { // cílios (personagens femininas)
+    g.lineWidth = 6; g.strokeStyle = '#1b1b1b';
+    for (const [x, d] of [[74, -1], [182, 1]]) { g.beginPath(); g.moveTo(x, 104); g.lineTo(x + d * 14, 92); g.moveTo(x + d * 6, 100); g.lineTo(x + d * 20, 96); g.stroke(); }
+  }
   const tex = new THREE.CanvasTexture(c);
   tex.colorSpace = THREE.SRGBColorSpace;
   tex.anisotropy = 4;
@@ -69,7 +73,7 @@ function faceTexture(kind) {
 const mat = (color, extra = {}) => new THREE.MeshStandardMaterial({ color, roughness: 0.75, metalness: 0, ...extra });
 
 export class Character {
-  constructor({ shirt = '#ffd23a', pants = '#24427a', cap = '#2e9e4f', vest = '#ff7a1a' } = {}) {
+  constructor({ shirt = '#ffd23a', pants = '#24427a', cap = '#2e9e4f', vest = '#ff7a1a', skin = SKIN, lashes = false } = {}) {
     this.root = new THREE.Group();          // posição no mundo (pés no y=0)
     this.body = new THREE.Group();          // inclinação do corpo inteiro (pivô no quadril)
     this.body.position.y = 2;
@@ -100,12 +104,12 @@ export class Character {
     this.neck = new THREE.Group();
     this.neck.position.y = 2;
     this.torso.add(this.neck);
-    const head = cast(new THREE.Mesh(new RoundedBoxGeometry(1.25, 1.2, 1.2, 3, 0.3), mat(SKIN)));
+    const head = cast(new THREE.Mesh(new RoundedBoxGeometry(1.25, 1.2, 1.2, 3, 0.3), mat(skin)));
     head.position.y = 0.62;
     this.neck.add(head);
     this.faces = {};
     for (const k of ['neutral', 'happy', 'worried', 'scared', 'shout', 'determined', 'tired', 'surprised'])
-      this.faces[k] = faceTexture(k);
+      this.faces[k] = faceTexture(k, lashes);
     this.faceMat = new THREE.MeshBasicMaterial({ map: this.faces.neutral, transparent: true, toneMapped: false });
     const face = new THREE.Mesh(new THREE.PlaneGeometry(1.1, 1.1), this.faceMat);
     face.position.set(0, 0.6, 0.605);
@@ -128,7 +132,7 @@ export class Character {
       p.position.set(side * 1.5, 1.8, 0);
       const sleeve = cast(new THREE.Mesh(new RoundedBoxGeometry(0.95, 0.8, 0.95, 2, 0.1), mat(shirt)));
       sleeve.position.y = -0.3;
-      const fore = cast(new THREE.Mesh(new RoundedBoxGeometry(0.88, 1.3, 0.88, 2, 0.12), mat(SKIN)));
+      const fore = cast(new THREE.Mesh(new RoundedBoxGeometry(0.88, 1.3, 0.88, 2, 0.12), mat(skin)));
       fore.position.y = -1.25;
       p.add(sleeve, fore);
       const hand = new THREE.Group(); // ponto para segurar objetos
@@ -222,6 +226,27 @@ export class Character {
     this.armR.rotation.x = -1.0 + Math.sin(t * 1.5) * 0.05; this.armL.rotation.x = -0.9; this.armL.rotation.z = -0.45;
   }
   lookUp(t, k = 1) { this.idle(t); this.neck.rotation.x = -0.6 * k; this.torso.rotation.x = -0.12 * k; }
+  sit(t) { // sentado (pernas para frente); quem chama abaixa o root ~2 unidades
+    this.idle(t);
+    this.legL.rotation.x = -1.45; this.legR.rotation.x = -1.45;
+    this.armL.rotation.x = -0.5; this.armR.rotation.x = -0.5;
+  }
+  paddle(t, speed = 1) { // remando sentado
+    this.sit(t);
+    const s = Math.sin(t * 3.2 * speed);
+    this.armR.rotation.x = -1.1 + s * 0.55; this.armL.rotation.x = -1.1 - s * 0.55;
+    this.armL.rotation.z = -0.3; this.armR.rotation.z = 0.3;
+    this.torso.rotation.y = s * 0.25; this.torso.rotation.x = 0.15;
+  }
+  point(t, k = 1, side = 'L') { // aponta para frente
+    this.idle(t);
+    const arm = side === 'L' ? this.armL : this.armR;
+    arm.rotation.x = -1.55 * k; arm.rotation.z = (side === 'L' ? -0.12 : 0.12) * k;
+  }
+  wade(t, speed = 0.8) { // andando com água na cintura: passos lentos, braços abertos
+    this.walk(t, speed, 0.4);
+    this.armL.rotation.z = 0.55; this.armR.rotation.z = -0.55;
+  }
   aim(t, up = 0.3) { // segura o sinalizador com o braço direito à frente
     this.idle(t);
     this.armR.rotation.x = -1.5 - up; this.armL.rotation.x = -1.3 - up; this.armL.rotation.z = -0.35;

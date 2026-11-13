@@ -3,13 +3,13 @@ import * as THREE from 'three';
 import { Character } from './lib/character.js';
 import * as W from './lib/world.js';
 import { HUD } from './lib/hud.js';
-import { buildShots, SURVIVAL } from './shots.js';
-
 const params = new URLSearchParams(location.search);
+const EP = params.get('ep') || 'ep01';
+const { buildShots, SURVIVAL, HUD_OPTS } = await import(`./${EP}/shots.js`);
 const SCALE = parseFloat(params.get('scale') || '1');
 const OUT_W = Math.round(1080 * SCALE), OUT_H = Math.round(1920 * SCALE);
 
-const timeline = await (await fetch('./timeline.json')).json();
+const timeline = await (await fetch(`./${EP}/timeline.json`)).json();
 await document.fonts.load('100px "Lilita One"', 'SOBREVIVÊNCIA ÃÉÇ');
 
 const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
@@ -62,12 +62,16 @@ const flareShot = new THREE.Group(); scene.add(flareShot);
 
 const world = { THREE, scene, camera, camera2, renderer, hemi, sun, fillLight, sky, ocean, boat, wave, rain, bolt, bubbles, rays,
   island, interior, ship, shipSmoke, smoke, gulls, seabed, hero, rod, flare, looseVest, W };
+// objetos extras criados por cada episódio (escondidos a cada quadro, como os demais)
+const extras = [];
+world.extra = (obj) => { scene.add(obj); extras.push(obj); return obj; };
+world.Character = Character;
 const toggles = ['boat', 'wave', 'rain', 'bolt', 'bubbles', 'rays', 'ship', 'seabed', 'looseVest'];
 const groupOf = { island: island.group, interior: interior.group, shipSmoke: shipSmoke.mesh, smoke: smoke.mesh, gulls: gulls.group,
   ocean: ocean.mesh, rain: rain.mesh, bubbles: bubbles.mesh, hero: hero.root, rod, flare };
 
 const shots = buildShots(world, timeline);
-const hud = new HUD(timeline, SURVIVAL(timeline));
+const hud = new HUD(timeline, SURVIVAL(timeline), HUD_OPTS || {});
 const out = document.getElementById('out');
 out.width = OUT_W; out.height = OUT_H;
 const g = out.getContext('2d');
@@ -75,6 +79,7 @@ const g = out.getContext('2d');
 function resetWorld() {
   for (const k of toggles) (world[k].mesh || world[k]).visible = false;
   for (const k of Object.values(groupOf)) k.visible = false;
+  for (const o of extras) o.visible = false;
   sky.mesh.visible = true; sky.uniforms.flash.value = 0;
   scene.fog.color.set('#bfe3ff'); scene.fog.near = 80; scene.fog.far = 1200;
   hemi.intensity = 1.4; hemi.color.set('#cfe9ff'); hemi.groundColor.set('#5c4a32');
@@ -98,7 +103,7 @@ export function renderFrame(t) {
   const shot = shots.find((s) => t >= s.start && t < s.end) || shots[shots.length - 1];
   const local = t - shot.start, u = Math.min(1, local / (shot.end - shot.start));
   const fx = {};
-  const ctx = { t, local, u, fx, start: shot.start, dur: shot.end - shot.start, show: (...names) => names.forEach((n) => ((groupOf[n] || world[n].mesh || world[n]).visible = true)) };
+  const ctx = { t, local, u, fx, start: shot.start, dur: shot.end - shot.start, show: (...names) => names.forEach((n) => { const o = typeof n === 'object' ? (n.isObject3D ? n : n.mesh) : groupOf[n] || world[n].mesh || world[n]; o.visible = true; }) };
   shot.run(ctx);
   camera.aspect = 9 / 16; camera.updateProjectionMatrix();
   const focus = ctx.focus || hero.root.position;
@@ -106,7 +111,9 @@ export function renderFrame(t) {
   if (ocean.mesh.visible) ocean.update(t, camera.position.x, camera.position.z);
   sky.mesh.position.copy(camera.position);
   renderer.setScissorTest(false); renderer.setViewport(0, 0, OUT_W, OUT_H); renderer.clear();
-  if (ctx.split) {
+  const only = params.get('view'); // depuração: ?view=left|right mostra só uma metade da tela dividida
+  if (ctx.split && only) { ctx.split[only](); camera.aspect = 9 / 16; camera.updateProjectionMatrix(); sky.mesh.position.copy(camera.position); if (ocean.mesh.visible) ocean.update(t, camera.position.x, camera.position.z); renderer.render(scene, camera); }
+  else if (ctx.split) {
     // tela dividida: duas câmeras
     renderer.setScissorTest(true);
     const halfW = OUT_W / 2;
@@ -128,11 +135,13 @@ export function renderFrame(t) {
 window.DURATION = timeline.duration;
 window.renderFrame = renderFrame;
 window.grab = (q = 0.9) => out.toDataURL('image/jpeg', q);
+window.__dbgState = () => ({ cam: camera.position.toArray().map((v) => +v.toFixed(2)), hero: hero.root.position.toArray().map((v) => +v.toFixed(2)), rotY: +hero.root.rotation.y.toFixed(2) });
 window.READY = true;
 
 // pré-visualização interativa (quando aberto no navegador)
 if (!params.has('headless')) {
-  const aud = document.getElementById('aud'), seek = document.getElementById('seek'), tm = document.getElementById('time');
+  const aud = document.getElementById('aud'); aud.src = `../build/${EP}/narracao.wav`;
+  const seek = document.getElementById('seek'), tm = document.getElementById('time');
   seek.max = timeline.duration;
   let playing = false;
   document.getElementById('play').onclick = () => { playing = !playing; playing ? aud.play() : aud.pause(); };

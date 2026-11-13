@@ -454,11 +454,11 @@ export class Smoke {
       new THREE.MeshStandardMaterial({ color, flatShading: true, transparent: true, opacity: 0.85, roughness: 1 }), n);
     this.mesh.frustumCulled = false; this.d = new THREE.Object3D();
   }
-  update(t, origin, height = 40, wind = [6, 0, 2]) {
+  update(t, origin, height = 40, wind = [6, 0, 2], size = 1) {
     this.seed.forEach(([o, x, z, s], i) => {
       const k = (o + t * 0.12) % 1;
       this.d.position.set(origin.x + x * 1.5 + wind[0] * k * k * 3, origin.y + k * height, origin.z + z * 1.5 + wind[2] * k * 3);
-      this.d.scale.setScalar(s * (1.2 + k * 5) * (k > 0.92 ? (1 - k) / 0.08 : 1));
+      this.d.scale.setScalar(size * s * (1.2 + k * 5) * (k > 0.92 ? (1 - k) / 0.08 : 1));
       this.d.rotation.set(t * 0.3 + i, i, 0); this.d.updateMatrix(); this.mesh.setMatrixAt(i, this.d.matrix);
     });
     this.mesh.instanceMatrix.needsUpdate = true;

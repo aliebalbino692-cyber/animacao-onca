@@ -13,13 +13,18 @@ export const KEYWORDS = {
   fumaca: '#ff8a1f', vivo: '#45f06a', faria: '#ffd23a', comenta: '#45f06a',
 };
 // exceções: "na maré" só é destaque na frase do aviso; "não" só no aviso
-const ONLY_IN_LINE = { nao: [11], confie: [11] };
 
 export class HUD {
   // layout seguro para TikTok/Reels/Shorts: nada importante nos ~200 px do topo,
   // nos ~420 px de baixo nem na coluna de ícones da direita
   constructor(timeline, survivalKeys, opts = {}) {
-    this.opts = { tag: 'EP. 1 • O FAROL DA MARÉ', next: 'PARTE 2 EM BREVE!', barY: 250, captionY: 1300, ...opts };
+    this.opts = {
+      tag: 'EP. 1 • O FAROL DA MARÉ', next: 'PARTE 2 EM BREVE!', barY: 250, captionY: 1300,
+      title: [['O FAROL', '#ffd23a'], ['DA MARÉ', '#3fe0ff']],
+      keywords: {}, onlyInLine: { nao: [11], confie: [11] },
+      lineColors: { 11: { na: '#ff3b3b', mare: '#ff3b3b' }, 17: { um: '#ff3b3b' } },
+      speakers: {}, // voz -> { name, color } (rótulo acima da legenda quando outro personagem fala)
+      ...opts };
     this.tl = timeline;
     this.keys = survivalKeys; // [[t, valor], ...]
     this.chunks = this.buildChunks();
@@ -68,6 +73,8 @@ export class HUD {
     if (fx.black) { g.fillStyle = `rgba(0,0,0,${fx.black})`; g.fillRect(0, 0, 1080, 1920); }
     if (fx.redPulse) { const a = fx.redPulse; const gr = g.createRadialGradient(540, 960, 400, 540, 960, 1150); gr.addColorStop(0, 'rgba(255,0,0,0)'); gr.addColorStop(1, `rgba(220,0,0,${a})`); g.fillStyle = gr; g.fillRect(0, 0, 1080, 1920); }
     if (fx.arrows) this.arrows(g, t, fx.arrows);
+    if (fx.flow) this.flow(g, t, fx.flow);
+    if (fx.sepia) this.sepia(g, fx.sepia);
     if (fx.badge) this.badge(g, t, fx.badge);
     if (fx.split) this.split(g, t, fx.split);
     if (fx.title) this.title(g, fx.title);
@@ -140,10 +147,10 @@ export class HUD {
     g.save(); g.font = `${size}px ${FONT}`; g.textAlign = 'left'; g.textBaseline = 'middle';
     const items = c.words.map((w) => {
       const n = norm(w.text);
-      let color = KEYWORDS[n];
-      if (ONLY_IN_LINE[n] && !ONLY_IN_LINE[n].includes(c.line)) color = undefined;
-      if (c.line === 11 && (n === 'na' || n === 'mare')) color = '#ff3b3b';
-      if (c.line === 17 && n === 'um') color = '#ff3b3b';
+      const o = this.opts;
+      let color = o.keywords[n] ?? KEYWORDS[n];
+      if (o.onlyInLine[n] && !o.onlyInLine[n].includes(c.line)) color = undefined;
+      if (o.lineColors[c.line] && o.lineColors[c.line][n]) color = o.lineColors[c.line][n];
       const text = color ? w.text.toUpperCase() : w.text;
       return { w, text, color, width: g.measureText(text).width * (color ? 1.12 : 1) + 40 };
     });
@@ -151,6 +158,13 @@ export class HUD {
     const rows = [[]]; let rw = 0;
     for (const it of items) { if (rw + it.width > 820 && rows[rows.length - 1].length) { rows.push([]); rw = 0; } rows[rows.length - 1].push(it); rw += it.width; }
     const pop = easeOut(range(t, c.start - 0.02, c.start + 0.12));
+    const sp = this.opts.speakers[c.words[0].voice];
+    if (sp) {
+      g.save(); g.font = `54px ${FONT}`; g.textAlign = 'center'; g.lineJoin = 'round';
+      const yy = y0 - 60 - (rows.length - 1) * 56 - 50;
+      g.lineWidth = 14; g.strokeStyle = '#000'; g.strokeText(sp.name, 540, yy); g.fillStyle = sp.color; g.fillText(sp.name, 540, yy);
+      g.restore();
+    }
     rows.forEach((row, ri) => {
       const total = row.reduce((s, it) => s + it.width, 0) - 40;
       let x = 540 - total / 2; const y = y0 + ri * 112 - (rows.length - 1) * 56;
@@ -180,6 +194,26 @@ export class HUD {
     for (const x of [300, 540, 780]) { arrow(x, 520, 1); arrow(x, 1120, -1); }
     g.restore();
   }
+  flow(g, t, k) { // setas azuis da correnteza (da esquerda para a direita)
+    g.save(); g.globalAlpha = k;
+    for (let row = 0; row < 3; row++) {
+      const y = 620 + row * 260, off = ((t * 520 + row * 170) % 1300) - 260;
+      g.save(); g.translate(off, y);
+      g.fillStyle = '#3fe0ff'; g.strokeStyle = '#000'; g.lineWidth = 8;
+      g.beginPath(); g.moveTo(-90, -22); g.lineTo(20, -22); g.lineTo(20, -52); g.lineTo(90, 0); g.lineTo(20, 52); g.lineTo(20, 22); g.lineTo(-90, 22); g.closePath(); g.stroke(); g.fill();
+      g.restore();
+    }
+    g.restore();
+  }
+  sepia(g, k) { // efeito de lembrança (flashback)
+    g.save(); g.globalAlpha = k;
+    g.globalCompositeOperation = 'saturation'; g.fillStyle = '#808080'; g.fillRect(0, 0, 1080, 1920);
+    g.globalCompositeOperation = 'multiply'; g.fillStyle = '#e8c48c'; g.fillRect(0, 0, 1080, 1920);
+    g.globalCompositeOperation = 'source-over';
+    g.font = `52px ${FONT}`; g.textAlign = 'center'; g.lineJoin = 'round';
+    g.lineWidth = 12; g.strokeStyle = '#000'; g.strokeText('EP. 1', 540, 520); g.fillStyle = '#fff'; g.fillText('EP. 1', 540, 520);
+    g.restore();
+  }
   badge(g, t, b) {
     const a = b.k;
     g.save(); g.globalAlpha = a; g.translate(540, 1080); g.scale(0.7 + 0.3 * easeOut(a), 0.7 + 0.3 * easeOut(a));
@@ -191,8 +225,8 @@ export class HUD {
   title(g, k) {
     g.save(); g.globalAlpha = k; g.textAlign = 'center'; g.textBaseline = 'middle';
     g.font = `120px ${FONT}`; g.lineJoin = 'round';
-    g.lineWidth = 24; g.strokeStyle = '#000'; g.strokeText('O FAROL', 540, 540); g.strokeText('DA MARÉ', 540, 670);
-    g.fillStyle = '#ffd23a'; g.fillText('O FAROL', 540, 540); g.fillStyle = '#3fe0ff'; g.fillText('DA MARÉ', 540, 670);
+    g.lineWidth = 24; g.strokeStyle = '#000';
+    this.opts.title.forEach(([txt, col], i) => { const y = 540 + i * 130; g.strokeText(txt, 540, y); g.fillStyle = col; g.fillText(txt, 540, y); });
     g.restore();
   }
   split(g, t, s) {
@@ -218,7 +252,19 @@ export class HUD {
       g.font = `58px ${FONT}`; g.fillStyle = '#fff'; g.fillText(o.l1, 0, 0); g.fillStyle = o.color; g.fillText(o.l2, 0, 66);
       g.restore();
     };
-    card(270, 'A', A, 0); card(810, 'B', B, Math.PI);
+    if (s.pick) { // destaque da opção escolhida pelo público
+      g.save(); g.globalAlpha = s.k * (s.pick === 'A' ? 1 : 0.25); card(270, 'A', A, 0); g.restore();
+      g.save(); g.globalAlpha = s.k * (s.pick === 'B' ? 1 : 0.25); card(810, 'B', B, Math.PI); g.restore();
+      const x = s.pick === 'A' ? 270 : 810, col = (s.pick === 'A' ? A : B).color;
+      g.save(); g.globalAlpha = s.k; g.translate(x, 960); g.scale(1.12 + Math.sin(t * 8) * 0.03, 1.12 + Math.sin(t * 8) * 0.03);
+      this.rr(g, -250, -200, 500, 350, 40); g.lineWidth = 12; g.strokeStyle = '#fff'; g.stroke(); g.restore();
+      g.save(); g.globalAlpha = s.k; g.textAlign = 'center'; g.textBaseline = 'middle'; g.font = `70px ${FONT}`; g.lineJoin = 'round';
+      g.lineWidth = 16; g.strokeStyle = '#000'; g.strokeText('VOCÊS ESCOLHERAM:', 540, 700); g.fillStyle = col; g.fillText('VOCÊS ESCOLHERAM:', 540, 700);
+      g.restore();
+    } else if (s.focus) { // destaca a opção que está sendo narrada
+      g.save(); g.globalAlpha = s.k * (s.focus === 'A' ? 1 : 0.45); card(270, 'A', A, 0); g.restore();
+      g.save(); g.globalAlpha = s.k * (s.focus === 'B' ? 1 : 0.45); card(810, 'B', B, Math.PI); g.restore();
+    } else { card(270, 'A', A, 0); card(810, 'B', B, Math.PI); }
     g.restore();
   }
   cta(g, t, c) {

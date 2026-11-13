@@ -1,0 +1,1003 @@
+{
+ "duration": 61.225,
+ "lines": [
+  {
+   "index": 1,
+   "text": "Escolhi a fumaça. Desci o farol correndo.",
+   "voice": 0,
+   "start": 1.0,
+   "speechEnd": 3.341,
+   "end": 4.041
+  },
+  {
+   "index": 2,
+   "text": "A água já batia na minha cintura.",
+   "voice": 0,
+   "start": 4.041,
+   "speechEnd": 5.884,
+   "end": 6.484
+  },
+  {
+   "index": 3,
+   "text": "Ergui o sinalizador pra não molhar... e entrei na mata.",
+   "voice": 0,
+   "start": 6.484,
+   "speechEnd": 9.423,
+   "end": 10.123
+  },
+  {
+   "index": 4,
+   "text": "Do nada, a correnteza me puxou!",
+   "voice": 0,
+   "start": 10.123,
+   "speechEnd": 12.002,
+   "end": 12.802
+  },
+  {
+   "index": 5,
+   "text": "Me agarrei num cipó com toda a força.",
+   "voice": 0,
+   "start": 12.802,
+   "speechEnd": 15.288,
+   "end": 16.288
+  },
+  {
+   "index": 6,
+   "text": "Cheguei na fumaça: uma fogueira... e ninguém.",
+   "voice": 0,
+   "start": 16.288,
+   "speechEnd": 19.34,
+   "end": 20.14
+  },
+  {
+   "index": 7,
+   "text": "Do lado, um diário. Dia quarenta e dois.",
+   "voice": 0,
+   "start": 20.14,
+   "speechEnd": 23.598,
+   "end": 24.298
+  },
+  {
+   "index": 8,
+   "text": "\"A maré sobe toda lua cheia. E hoje... é lua cheia.\"",
+   "voice": 0,
+   "start": 24.298,
+   "speechEnd": 28.004,
+   "end": 28.904
+  },
+  {
+   "index": 9,
+   "text": "Aí, uma voz atrás de mim...",
+   "voice": 0,
+   "start": 28.904,
+   "speechEnd": 30.797,
+   "end": 31.147
+  },
+  {
+   "index": 10,
+   "text": "Você também naufragou?",
+   "voice": 1,
+   "start": 31.147,
+   "speechEnd": 33.107,
+   "end": 34.007
+  },
+  {
+   "index": 11,
+   "text": "Era Lia. Ela tava ali há quarenta e dois dias.",
+   "voice": 0,
+   "start": 34.007,
+   "speechEnd": 36.941,
+   "end": 37.541
+  },
+  {
+   "index": 12,
+   "text": "Foi ela que escreveu o aviso no farol.",
+   "voice": 0,
+   "start": 37.541,
+   "speechEnd": 39.473,
+   "end": 40.373
+  },
+  {
+   "index": 13,
+   "text": "A água apagou a fogueira. O sol tava se pondo.",
+   "voice": 0,
+   "start": 40.373,
+   "speechEnd": 42.851,
+   "end": 43.651
+  },
+  {
+   "index": 14,
+   "text": "Ela tinha uma canoa escondida...",
+   "voice": 0,
+   "start": 43.651,
+   "speechEnd": 45.225,
+   "end": 45.475
+  },
+  {
+   "index": 15,
+   "text": "e apontou pra uma árvore gigante no meio da ilha.",
+   "voice": 0,
+   "start": 45.475,
+   "speechEnd": 47.847,
+   "end": 49.047
+  },
+  {
+   "index": 16,
+   "text": "Subir na árvore e esperar a maré baixar...",
+   "voice": 0,
+   "start": 49.047,
+   "speechEnd": 51.437,
+   "end": 51.737
+  },
+  {
+   "index": 17,
+   "text": "ou remar atrás do navio e usar o sinalizador lá?",
+   "voice": 0,
+   "start": 51.737,
+   "speechEnd": 54.314,
+   "end": 55.314
+  },
+  {
+   "index": 18,
+   "text": "O que você faria? Comenta A ou B!",
+   "voice": 0,
+   "start": 55.314,
+   "speechEnd": 57.725,
+   "end": 61.225
+  }
+ ],
+ "words": [
+  {
+   "text": "Escolhi",
+   "start": 1.112,
+   "end": 1.32,
+   "voice": 0
+  },
+  {
+   "text": "a",
+   "start": 1.32,
+   "end": 1.4,
+   "voice": 0
+  },
+  {
+   "text": "fumaça.",
+   "start": 1.467,
+   "end": 2.04,
+   "voice": 0
+  },
+  {
+   "text": "Desci",
+   "start": 2.16,
+   "end": 2.467,
+   "voice": 0
+  },
+  {
+   "text": "o",
+   "start": 2.453,
+   "end": 2.533,
+   "voice": 0
+  },
+  {
+   "text": "farol",
+   "start": 2.56,
+   "end": 2.76,
+   "voice": 0
+  },
+  {
+   "text": "correndo.",
+   "start": 2.8,
+   "end": 3.341,
+   "voice": 0
+  },
+  {
+   "text": "A",
+   "start": 4.22,
+   "end": 4.34,
+   "voice": 0
+  },
+  {
+   "text": "água",
+   "start": 4.38,
+   "end": 4.58,
+   "voice": 0
+  },
+  {
+   "text": "já",
+   "start": 4.58,
+   "end": 4.7,
+   "voice": 0
+  },
+  {
+   "text": "batia",
+   "start": 4.7,
+   "end": 5.06,
+   "voice": 0
+  },
+  {
+   "text": "na",
+   "start": 5.1,
+   "end": 5.22,
+   "voice": 0
+  },
+  {
+   "text": "minha",
+   "start": 5.22,
+   "end": 5.38,
+   "voice": 0
+  },
+  {
+   "text": "cintura.",
+   "start": 5.42,
+   "end": 5.884,
+   "voice": 0
+  },
+  {
+   "text": "Ergui",
+   "start": 6.66,
+   "end": 6.94,
+   "voice": 0
+  },
+  {
+   "text": "o",
+   "start": 6.927,
+   "end": 7.007,
+   "voice": 0
+  },
+  {
+   "text": "sinalizador",
+   "start": 6.98,
+   "end": 7.58,
+   "voice": 0
+  },
+  {
+   "text": "pra",
+   "start": 7.58,
+   "end": 7.66,
+   "voice": 0
+  },
+  {
+   "text": "não",
+   "start": 7.7,
+   "end": 7.82,
+   "voice": 0
+  },
+  {
+   "text": "molhar...",
+   "start": 7.86,
+   "end": 8.42,
+   "voice": 0
+  },
+  {
+   "text": "e",
+   "start": 8.42,
+   "end": 8.5,
+   "voice": 0
+  },
+  {
+   "text": "entrei",
+   "start": 8.5,
+   "end": 8.82,
+   "voice": 0
+  },
+  {
+   "text": "na",
+   "start": 8.82,
+   "end": 8.94,
+   "voice": 0
+  },
+  {
+   "text": "mata.",
+   "start": 8.94,
+   "end": 9.42,
+   "voice": 0
+  },
+  {
+   "text": "Do",
+   "start": 10.309,
+   "end": 10.389,
+   "voice": 0
+  },
+  {
+   "text": "nada,",
+   "start": 10.4,
+   "end": 10.8,
+   "voice": 0
+  },
+  {
+   "text": "a",
+   "start": 10.88,
+   "end": 11.0,
+   "voice": 0
+  },
+  {
+   "text": "correnteza",
+   "start": 11.0,
+   "end": 11.4,
+   "voice": 0
+  },
+  {
+   "text": "me",
+   "start": 11.44,
+   "end": 11.56,
+   "voice": 0
+  },
+  {
+   "text": "puxou!",
+   "start": 11.6,
+   "end": 12.002,
+   "voice": 0
+  },
+  {
+   "text": "Me",
+   "start": 13.013,
+   "end": 13.093,
+   "voice": 0
+  },
+  {
+   "text": "agarrei",
+   "start": 13.12,
+   "end": 13.4,
+   "voice": 0
+  },
+  {
+   "text": "num",
+   "start": 13.4,
+   "end": 13.48,
+   "voice": 0
+  },
+  {
+   "text": "cipó",
+   "start": 13.52,
+   "end": 13.8,
+   "voice": 0
+  },
+  {
+   "text": "com",
+   "start": 13.88,
+   "end": 14.04,
+   "voice": 0
+  },
+  {
+   "text": "toda",
+   "start": 14.04,
+   "end": 14.2,
+   "voice": 0
+  },
+  {
+   "text": "a",
+   "start": 14.32,
+   "end": 14.44,
+   "voice": 0
+  },
+  {
+   "text": "força.",
+   "start": 14.48,
+   "end": 15.04,
+   "voice": 0
+  },
+  {
+   "text": "Cheguei",
+   "start": 16.547,
+   "end": 16.72,
+   "voice": 0
+  },
+  {
+   "text": "na",
+   "start": 16.72,
+   "end": 16.8,
+   "voice": 0
+  },
+  {
+   "text": "fumaça:",
+   "start": 16.84,
+   "end": 17.56,
+   "voice": 0
+  },
+  {
+   "text": "uma",
+   "start": 17.56,
+   "end": 17.76,
+   "voice": 0
+  },
+  {
+   "text": "fogueira...",
+   "start": 17.76,
+   "end": 18.587,
+   "voice": 0
+  },
+  {
+   "text": "e",
+   "start": 18.573,
+   "end": 18.653,
+   "voice": 0
+  },
+  {
+   "text": "ninguém.",
+   "start": 18.68,
+   "end": 19.34,
+   "voice": 0
+  },
+  {
+   "text": "Do",
+   "start": 20.35,
+   "end": 20.43,
+   "voice": 0
+  },
+  {
+   "text": "lado,",
+   "start": 20.44,
+   "end": 21.093,
+   "voice": 0
+  },
+  {
+   "text": "um",
+   "start": 21.107,
+   "end": 21.2,
+   "voice": 0
+  },
+  {
+   "text": "diário.",
+   "start": 21.28,
+   "end": 22.04,
+   "voice": 0
+  },
+  {
+   "text": "Dia",
+   "start": 22.04,
+   "end": 22.24,
+   "voice": 0
+  },
+  {
+   "text": "quarenta",
+   "start": 22.28,
+   "end": 22.667,
+   "voice": 0
+  },
+  {
+   "text": "e",
+   "start": 22.653,
+   "end": 22.733,
+   "voice": 0
+  },
+  {
+   "text": "dois.",
+   "start": 22.76,
+   "end": 23.458,
+   "voice": 0
+  },
+  {
+   "text": "\"A",
+   "start": 24.298,
+   "end": 24.378,
+   "voice": 0
+  },
+  {
+   "text": "maré",
+   "start": 24.38,
+   "end": 24.62,
+   "voice": 0
+  },
+  {
+   "text": "sobe",
+   "start": 24.66,
+   "end": 25.02,
+   "voice": 0
+  },
+  {
+   "text": "toda",
+   "start": 25.06,
+   "end": 25.26,
+   "voice": 0
+  },
+  {
+   "text": "lua",
+   "start": 25.3,
+   "end": 25.58,
+   "voice": 0
+  },
+  {
+   "text": "cheia.",
+   "start": 25.62,
+   "end": 26.327,
+   "voice": 0
+  },
+  {
+   "text": "E",
+   "start": 26.313,
+   "end": 26.393,
+   "voice": 0
+  },
+  {
+   "text": "hoje...",
+   "start": 26.42,
+   "end": 27.14,
+   "voice": 0
+  },
+  {
+   "text": "é",
+   "start": 27.14,
+   "end": 27.22,
+   "voice": 0
+  },
+  {
+   "text": "lua",
+   "start": 27.22,
+   "end": 27.5,
+   "voice": 0
+  },
+  {
+   "text": "cheia.\"",
+   "start": 27.58,
+   "end": 28.004,
+   "voice": 0
+  },
+  {
+   "text": "Aí,",
+   "start": 29.08,
+   "end": 29.56,
+   "voice": 0
+  },
+  {
+   "text": "uma",
+   "start": 29.56,
+   "end": 29.76,
+   "voice": 0
+  },
+  {
+   "text": "voz",
+   "start": 29.8,
+   "end": 30.04,
+   "voice": 0
+  },
+  {
+   "text": "atrás",
+   "start": 30.04,
+   "end": 30.32,
+   "voice": 0
+  },
+  {
+   "text": "de",
+   "start": 30.32,
+   "end": 30.4,
+   "voice": 0
+  },
+  {
+   "text": "mim...",
+   "start": 30.4,
+   "end": 30.797,
+   "voice": 0
+  },
+  {
+   "text": "Você",
+   "start": 31.267,
+   "end": 31.547,
+   "voice": 1
+  },
+  {
+   "text": "também",
+   "start": 31.587,
+   "end": 32.027,
+   "voice": 1
+  },
+  {
+   "text": "naufragou?",
+   "start": 32.027,
+   "end": 33.067,
+   "voice": 1
+  },
+  {
+   "text": "Era",
+   "start": 34.129,
+   "end": 34.329,
+   "voice": 0
+  },
+  {
+   "text": "Lia.",
+   "start": 34.369,
+   "end": 35.009,
+   "voice": 0
+  },
+  {
+   "text": "Ela",
+   "start": 35.009,
+   "end": 35.129,
+   "voice": 0
+  },
+  {
+   "text": "tava",
+   "start": 35.169,
+   "end": 35.369,
+   "voice": 0
+  },
+  {
+   "text": "ali",
+   "start": 35.409,
+   "end": 35.529,
+   "voice": 0
+  },
+  {
+   "text": "há",
+   "start": 35.516,
+   "end": 35.609,
+   "voice": 0
+  },
+  {
+   "text": "quarenta",
+   "start": 35.649,
+   "end": 36.116,
+   "voice": 0
+  },
+  {
+   "text": "e",
+   "start": 36.102,
+   "end": 36.182,
+   "voice": 0
+  },
+  {
+   "text": "dois",
+   "start": 36.169,
+   "end": 36.409,
+   "voice": 0
+  },
+  {
+   "text": "dias.",
+   "start": 36.449,
+   "end": 36.941,
+   "voice": 0
+  },
+  {
+   "text": "Foi",
+   "start": 37.662,
+   "end": 37.889,
+   "voice": 0
+  },
+  {
+   "text": "ela",
+   "start": 37.929,
+   "end": 38.049,
+   "voice": 0
+  },
+  {
+   "text": "que",
+   "start": 38.089,
+   "end": 38.209,
+   "voice": 0
+  },
+  {
+   "text": "escreveu",
+   "start": 38.209,
+   "end": 38.549,
+   "voice": 0
+  },
+  {
+   "text": "o",
+   "start": 38.529,
+   "end": 38.609,
+   "voice": 0
+  },
+  {
+   "text": "aviso",
+   "start": 38.569,
+   "end": 38.849,
+   "voice": 0
+  },
+  {
+   "text": "no",
+   "start": 38.889,
+   "end": 39.009,
+   "voice": 0
+  },
+  {
+   "text": "farol.",
+   "start": 39.089,
+   "end": 39.473,
+   "voice": 0
+  },
+  {
+   "text": "A",
+   "start": 40.509,
+   "end": 40.589,
+   "voice": 0
+  },
+  {
+   "text": "água",
+   "start": 40.589,
+   "end": 40.789,
+   "voice": 0
+  },
+  {
+   "text": "apagou",
+   "start": 40.829,
+   "end": 41.109,
+   "voice": 0
+  },
+  {
+   "text": "a",
+   "start": 41.109,
+   "end": 41.189,
+   "voice": 0
+  },
+  {
+   "text": "fogueira.",
+   "start": 41.189,
+   "end": 41.789,
+   "voice": 0
+  },
+  {
+   "text": "O",
+   "start": 41.789,
+   "end": 41.909,
+   "voice": 0
+  },
+  {
+   "text": "sol",
+   "start": 41.949,
+   "end": 42.069,
+   "voice": 0
+  },
+  {
+   "text": "tava",
+   "start": 42.069,
+   "end": 42.229,
+   "voice": 0
+  },
+  {
+   "text": "se",
+   "start": 42.269,
+   "end": 42.469,
+   "voice": 0
+  },
+  {
+   "text": "pondo.",
+   "start": 42.509,
+   "end": 42.851,
+   "voice": 0
+  },
+  {
+   "text": "Ela",
+   "start": 43.789,
+   "end": 43.989,
+   "voice": 0
+  },
+  {
+   "text": "tinha",
+   "start": 43.976,
+   "end": 44.069,
+   "voice": 0
+  },
+  {
+   "text": "uma",
+   "start": 44.109,
+   "end": 44.229,
+   "voice": 0
+  },
+  {
+   "text": "canoa",
+   "start": 44.269,
+   "end": 44.549,
+   "voice": 0
+  },
+  {
+   "text": "escondida...",
+   "start": 44.589,
+   "end": 45.225,
+   "voice": 0
+  },
+  {
+   "text": "e",
+   "start": 45.532,
+   "end": 45.612,
+   "voice": 0
+  },
+  {
+   "text": "apontou",
+   "start": 45.639,
+   "end": 45.919,
+   "voice": 0
+  },
+  {
+   "text": "pra",
+   "start": 45.919,
+   "end": 45.999,
+   "voice": 0
+  },
+  {
+   "text": "uma",
+   "start": 46.039,
+   "end": 46.159,
+   "voice": 0
+  },
+  {
+   "text": "árvore",
+   "start": 46.199,
+   "end": 46.559,
+   "voice": 0
+  },
+  {
+   "text": "gigante",
+   "start": 46.559,
+   "end": 47.039,
+   "voice": 0
+  },
+  {
+   "text": "no",
+   "start": 47.079,
+   "end": 47.199,
+   "voice": 0
+  },
+  {
+   "text": "meio",
+   "start": 47.199,
+   "end": 47.359,
+   "voice": 0
+  },
+  {
+   "text": "da",
+   "start": 47.359,
+   "end": 47.439,
+   "voice": 0
+  },
+  {
+   "text": "ilha.",
+   "start": 47.479,
+   "end": 47.847,
+   "voice": 0
+  },
+  {
+   "text": "Subir",
+   "start": 49.239,
+   "end": 49.519,
+   "voice": 0
+  },
+  {
+   "text": "na",
+   "start": 49.559,
+   "end": 49.679,
+   "voice": 0
+  },
+  {
+   "text": "árvore",
+   "start": 49.799,
+   "end": 50.079,
+   "voice": 0
+  },
+  {
+   "text": "e",
+   "start": 50.066,
+   "end": 50.146,
+   "voice": 0
+  },
+  {
+   "text": "esperar",
+   "start": 50.119,
+   "end": 50.479,
+   "voice": 0
+  },
+  {
+   "text": "a",
+   "start": 50.479,
+   "end": 50.559,
+   "voice": 0
+  },
+  {
+   "text": "maré",
+   "start": 50.599,
+   "end": 50.799,
+   "voice": 0
+  },
+  {
+   "text": "baixar...",
+   "start": 50.799,
+   "end": 51.437,
+   "voice": 0
+  },
+  {
+   "text": "ou",
+   "start": 51.859,
+   "end": 51.979,
+   "voice": 0
+  },
+  {
+   "text": "remar",
+   "start": 52.059,
+   "end": 52.259,
+   "voice": 0
+  },
+  {
+   "text": "atrás",
+   "start": 52.259,
+   "end": 52.539,
+   "voice": 0
+  },
+  {
+   "text": "do",
+   "start": 52.539,
+   "end": 52.619,
+   "voice": 0
+  },
+  {
+   "text": "navio",
+   "start": 52.739,
+   "end": 53.019,
+   "voice": 0
+  },
+  {
+   "text": "e",
+   "start": 53.019,
+   "end": 53.099,
+   "voice": 0
+  },
+  {
+   "text": "usar",
+   "start": 53.139,
+   "end": 53.339,
+   "voice": 0
+  },
+  {
+   "text": "o",
+   "start": 53.339,
+   "end": 53.419,
+   "voice": 0
+  },
+  {
+   "text": "sinalizador",
+   "start": 53.459,
+   "end": 53.979,
+   "voice": 0
+  },
+  {
+   "text": "lá?",
+   "start": 54.019,
+   "end": 54.314,
+   "voice": 0
+  },
+  {
+   "text": "O",
+   "start": 55.419,
+   "end": 55.499,
+   "voice": 0
+  },
+  {
+   "text": "que",
+   "start": 55.499,
+   "end": 55.619,
+   "voice": 0
+  },
+  {
+   "text": "você",
+   "start": 55.619,
+   "end": 55.859,
+   "voice": 0
+  },
+  {
+   "text": "faria?",
+   "start": 55.859,
+   "end": 56.472,
+   "voice": 0
+  },
+  {
+   "text": "Comenta",
+   "start": 56.486,
+   "end": 56.899,
+   "voice": 0
+  },
+  {
+   "text": "A",
+   "start": 57.099,
+   "end": 57.179,
+   "voice": 0
+  },
+  {
+   "text": "ou",
+   "start": 57.179,
+   "end": 57.299,
+   "voice": 0
+  },
+  {
+   "text": "B!",
+   "start": 57.339,
+   "end": 57.725,
+   "voice": 0
+  }
+ ]
+}

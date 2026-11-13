@@ -1,7 +1,7 @@
 // Direção do episódio 01 — "O Farol da Maré": cada plano define cenário, ação do personagem e câmera em função do tempo
 import * as THREE from 'three';
-import { clamp, lerp, smooth, easeOut, easeIn, easeInOut, range, wobble } from './lib/util.js';
-import { mixSky, SKIES, islandHeight, trailPoint, LIGHTHOUSE } from './lib/world.js';
+import { clamp, lerp, smooth, easeOut, easeIn, easeInOut, range, wobble } from '../lib/util.js';
+import { mixSky, SKIES, islandHeight, trailPoint, LIGHTHOUSE } from '../lib/world.js';
 
 const V = (x, y, z) => new THREE.Vector3(x, y, z);
 const norm = (w) => w.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, '');
