@@ -140,6 +140,27 @@ elif EP == "ep02":
     mix += pad([87.3, 130.8, 174.6, 220], shot(11), shot(13), 0.07)   # alívio (Lia)
     mix += pad([55, 82.4, 110, 130.8, 164.8], shot(13), DUR, 0.10)    # clímax
     mix += pulse([(tCor - 0.3, shot(6)), (shot(13), DUR - 1)])
+elif EP == "ep03":
+    tQ, tPux, tAc, tRan = word("quebrou"), word("puxou"), word("acendeu"), word("ranger")
+    mix += insects(0, DUR, 0.02) + ocean * 0.10 * env(0, DUR, 0.6) + wind * 0.07 * env(shot(3), DUR, 0.6)
+    mix += burst(tQ - 0.05, 0.6, lambda tt: white[:len(tt)] * np.exp(-tt * 25)) * 0.6        # estalo da tábua
+    mix += burst(tQ + 1.4, 1.0, splash) * 0.35                                                # tábua cai na água
+    mix += burst(tPux, 0.8, creak) * 0.15
+    mix += burst(tAc, 1.6, lambda tt: np.sin(2 * np.pi * 110 * tt) * np.exp(-tt * 3) + np.sin(2 * np.pi * 220 * tt) * np.exp(-tt * 4) * 0.5) * 0.35  # luz acende (zumbido)
+    for k in range(5):                                                                         # rangidos da árvore
+        mix += burst(tRan - 0.3 + k * 0.7, 1.1, creak) * (0.35 + k * 0.05)
+    mix += rush * 0.22 * env(word("agua", 2) - 0.1, shot(15), 0.3) + normed(lowpass(brown, 80)) * 0.25 * env(tRan - 0.3, shot(17), 0.5)
+    for at in (tQ - 0.1, line(12)["start"] - 0.1, line(15)["start"] - 0.2, word("faria")):
+        mix += burst(at, 2.5, hit) * 0.55
+    cuts = [shot(i) for i in range(2, 18)] + [word("foto", 1) - 0.15, word("agua", 2) - 0.1]
+    mix += heart(tQ - 0.1, tPux + 0.3, 140) * 0.5 + heart(tRan - 0.3, line(17)["start"], 120) * 0.5
+    mix += pad([65.4, 98, 130.8, 155.6], 0, shot(4), 0.08)            # subida
+    mix += pad([55, 82.4, 110, 116.54], shot(4), shot(6), 0.10)       # perigo
+    mix += pad([73.4, 110, 146.8, 174.6], shot(6), shot(9), 0.07)     # mistério
+    mix += pad([58.3, 87.3, 116.5, 138.6], shot(9), shot(11), 0.07)   # tristeza (pai)
+    mix += pad([87.3, 130.8, 174.6, 220], shot(11), shot(14), 0.08)   # esperança (farol, navio)
+    mix += pad([55, 82.4, 110, 130.8, 164.8], shot(14), DUR, 0.10)    # clímax
+    mix += pulse([(tQ - 0.3, shot(6)), (tRan - 0.3, DUR - 1)])
 else:
     raise SystemExit("episódio sem trilha definida: " + EP)
 for at in cuts:

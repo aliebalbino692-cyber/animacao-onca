@@ -55,6 +55,12 @@ function faceTexture(kind, lashes = false) {
       brow(64, 70, 108, 66); brow(148, 66, 192, 70);
       g.beginPath(); g.ellipse(128, 182, 14, 18, 0, 0, 7); g.fill();
       break;
+    case 'sad':
+      g.lineWidth = 9; g.beginPath(); g.arc(88, 112, 13, 0.2, Math.PI - 0.2); g.stroke(); g.beginPath(); g.arc(168, 112, 13, 0.2, Math.PI - 0.2); g.stroke();
+      brow(66, 92, 108, 80); brow(148, 80, 190, 92);
+      g.lineWidth = 10; g.beginPath(); g.moveTo(100, 184); g.quadraticCurveTo(128, 166, 156, 184); g.stroke();
+      g.fillStyle = '#7fd0ff'; g.beginPath(); g.ellipse(84, 140, 6, 10, 0, 0, 7); g.fill();
+      break;
     default: // neutral
       eye(88, 114, 11, 15); eye(168, 114, 11, 15);
       brow(68, 82, 106, 80); brow(150, 80, 188, 82);
@@ -108,7 +114,7 @@ export class Character {
     head.position.y = 0.62;
     this.neck.add(head);
     this.faces = {};
-    for (const k of ['neutral', 'happy', 'worried', 'scared', 'shout', 'determined', 'tired', 'surprised'])
+    for (const k of ['neutral', 'happy', 'worried', 'scared', 'shout', 'determined', 'tired', 'surprised', 'sad'])
       this.faces[k] = faceTexture(k, lashes);
     this.faceMat = new THREE.MeshBasicMaterial({ map: this.faces.neutral, transparent: true, toneMapped: false });
     const face = new THREE.Mesh(new THREE.PlaneGeometry(1.1, 1.1), this.faceMat);
@@ -246,6 +252,14 @@ export class Character {
   wade(t, speed = 0.8) { // andando com água na cintura: passos lentos, braços abertos
     this.walk(t, speed, 0.4);
     this.armL.rotation.z = 0.55; this.armR.rotation.z = -0.55;
+  }
+  climb(t, speed = 1) { // escalando (de frente para o tronco)
+    this.reset();
+    const s = Math.sin(t * 5 * speed);
+    this.armL.rotation.x = -2.7 + s * 0.35; this.armR.rotation.x = -2.7 - s * 0.35;
+    this.armL.rotation.z = 0.15; this.armR.rotation.z = -0.15;
+    this.legL.rotation.x = -0.5 - s * 0.45; this.legR.rotation.x = -0.5 + s * 0.45;
+    this.neck.rotation.x = -0.3; this.torso.rotation.x = 0.1;
   }
   aim(t, up = 0.3) { // segura o sinalizador com o braço direito à frente
     this.idle(t);

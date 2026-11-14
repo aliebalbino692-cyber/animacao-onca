@@ -7,6 +7,7 @@ EP=${1:-ep01}; FPS=${2:-30}
 case "$EP" in
   ep01) NAME=ep01-o-farol-da-mare ;;
   ep02) NAME=ep02-a-fumaca-na-mata ;;
+  ep03) NAME=ep03-a-arvore-gigante ;;
   *) NAME=$EP ;;
 esac
 mkdir -p saida
