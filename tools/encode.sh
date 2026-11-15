@@ -8,6 +8,7 @@ case "$EP" in
   ep01) NAME=ep01-o-farol-da-mare ;;
   ep02) NAME=ep02-a-fumaca-na-mata ;;
   ep03) NAME=ep03-a-arvore-gigante ;;
+  ep04) NAME=ep04-o-farol-aceso ;;
   *) NAME=$EP ;;
 esac
 mkdir -p saida

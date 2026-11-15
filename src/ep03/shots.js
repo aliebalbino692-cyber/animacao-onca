@@ -91,7 +91,7 @@ export function buildShots(w, tl) {
     beacon.visible = k > 0;
     const u = beacon.userData; u.beam.rotation.y = t * rotSpeed; u.beam.visible = k > 0.3;
     u.glow.scale.setScalar(0.3 + 0.7 * k); u.halo.scale.setScalar(k); u.light.intensity = 120 * k;
-    u.beam.children.forEach((c) => (c.material.opacity = 0.13 * k));
+    u.beam.children.forEach((c) => (c.material.opacity = u.opacity * k));
   };
   const S = [];
   const add = (name, start, run) => S.push({ name, start, run });

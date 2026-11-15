@@ -161,6 +161,24 @@ elif EP == "ep03":
     mix += pad([87.3, 130.8, 174.6, 220], shot(11), shot(14), 0.08)   # esperança (farol, navio)
     mix += pad([55, 82.4, 110, 130.8, 164.8], shot(14), DUR, 0.10)    # clímax
     mix += pulse([(tQ - 0.3, shot(6)), (tRan - 0.3, DUR - 1)])
+elif EP == "ep04":
+    tTr, tPas, tPai, tPed, tTiro = word("tronco"), word("raspando"), word("pai"), word("pedras"), word("tiro")
+    mix += ocean * 0.14 * env(0, shot(6), 0.5) + rush * 0.22 * env(shot(2), shot(4), 0.4) + insects(shot(6), shot(7), 0.02)
+    mix += burst(word("gente", 1) + 0.9, 1.3, splash) * 0.5                                   # pulo na água
+    mix += normed(lowpass(white, 40)) * 0.18 * env(tTr - 0.6, shot(5), 0.3)                   # tronco chegando
+    mix += under * 0.35 * env(shot(5), shot(6) - 0.2, 0.15) + bubbles(shot(5) + 0.2, 10)       # debaixo d'água
+    mix += room * 0.10 * env(shot(7), word("la", 1), 0.2)
+    mix += wind * 0.10 * env(word("la", 1), DUR, 0.5) + ocean * 0.07 * env(word("la", 1), DUR, 0.5)
+    mix += normed(lowpass(white, 20)) * 0.12 * env(tPed - 1.0, shot(14), 0.5)                 # ondas nas pedras
+    for at in (tTr - 0.1, word("la", 1) - 0.1, tPai - 0.15, tPed - 0.2, line(14)["start"] - 0.2, word("faria")):
+        mix += burst(at, 2.5, hit) * 0.5
+    cuts = [shot(i) for i in range(2, 17)] + [word("gente", 1) - 0.15, word("la", 1) - 0.1]
+    mix += heart(tTr - 0.3, tPas, 140) * 0.5 + heart(shot(13), line(14)["start"], 115) * 0.6
+    mix += pad([55, 82.4, 110, 116.54], 0, shot(6), 0.10)             # perigo no mar
+    mix += pad([73.4, 110, 146.8, 174.6], shot(6), shot(9), 0.07)     # mistério (o homem)
+    mix += pad([87.3, 130.8, 174.6, 220], shot(9), shot(11), 0.08)    # reencontro
+    mix += pad([55, 82.4, 110, 130.8, 164.8], shot(11), DUR, 0.10)    # clímax
+    mix += pulse([(shot(2), shot(6)), (shot(11), DUR - 1)])
 else:
     raise SystemExit("episódio sem trilha definida: " + EP)
 for at in cuts:

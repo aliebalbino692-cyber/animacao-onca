@@ -83,19 +83,19 @@ export function makePhoto() {
 export function makeLoosePlank() { return shadow(box(1.4, 0.18, 0.5, '#a8723f')); }
 
 // ---------------- LUZ DO FAROL ----------------
-export function makeBeacon() {
+export function makeBeacon(opacity = 0.13, radius = 9) {
   const g = new THREE.Group();
   const glow = new THREE.Mesh(new THREE.SphereGeometry(1.3, 16, 12), new THREE.MeshBasicMaterial({ color: '#fff6c8', fog: false }));
   const halo = new THREE.Mesh(new THREE.SphereGeometry(3.2, 16, 12), new THREE.MeshBasicMaterial({ color: '#ffd76a', transparent: true, opacity: 0.25, blending: THREE.AdditiveBlending, depthWrite: false, fog: false }));
   g.add(glow, halo);
   const beam = new THREE.Group(); g.add(beam);
   for (const dir of [1, -1]) {
-    const cone = new THREE.Mesh(new THREE.ConeGeometry(9, 160, 24, 1, true),
-      new THREE.MeshBasicMaterial({ color: '#fff0b0', transparent: true, opacity: 0.13, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide, fog: false }));
+    const cone = new THREE.Mesh(new THREE.ConeGeometry(radius, 160, 24, 1, true),
+      new THREE.MeshBasicMaterial({ color: '#fff0b0', transparent: true, opacity, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide, fog: false }));
     cone.geometry.translate(0, -80, 0); cone.rotation.z = dir * Math.PI / 2; beam.add(cone);
   }
   const light = new THREE.PointLight('#ffe9a0', 120, 90, 1.4); g.add(light);
-  g.userData = { glow, halo, beam, light };
+  g.userData = { glow, halo, beam, light, opacity };
   return g;
 }
 
