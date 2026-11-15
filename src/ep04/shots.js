@@ -109,7 +109,7 @@ export function buildShots(w, tl) {
     w.bubbles.visible = k > 0.95; w.bubbles.update(c.t, to.clone().setY(L1 - 0.6), 3, 1.5, 3);
     fillAt(from.clone().add(V(6, 0, 10)), 25);
     cam(from.clone().add(V(9, lerp(2, -10, k), 12)), from.clone().lerp(to, k * 0.8).add(V(1, 1, 0)), 60, 0.05, c.t);
-    c.fx.flash = k > 0.97 ? 0.4 : 0;
+    c.fx.flash = Math.max(0, 0.45 - Math.abs(c.local - 1.3) * 2.5);
     c.focus = from;
   });
 
