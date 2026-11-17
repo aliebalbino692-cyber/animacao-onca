@@ -1,0 +1,779 @@
+{
+ "duration": 57.669,
+ "lines": [
+  {
+   "index": 1,
+   "text": "Vocês escolheram atirar. Eu mirei pro céu... e puxei o gatilho.",
+   "voice": 0,
+   "start": 1.0,
+   "speechEnd": 4.987,
+   "end": 6.587
+  },
+  {
+   "index": 2,
+   "text": "A luz vermelha subiu, rasgando a noite.",
+   "voice": 0,
+   "start": 6.587,
+   "speechEnd": 9.16,
+   "end": 10.56
+  },
+  {
+   "index": 3,
+   "text": "Por um segundo... nada.",
+   "voice": 0,
+   "start": 10.56,
+   "speechEnd": 12.58,
+   "end": 14.18
+  },
+  {
+   "index": 4,
+   "text": "Então o navio acendeu um holofote. Direto na gente!",
+   "voice": 0,
+   "start": 14.18,
+   "speechEnd": 17.283,
+   "end": 17.983
+  },
+  {
+   "index": 5,
+   "text": "Ele buzinou três vezes.",
+   "voice": 0,
+   "start": 17.983,
+   "speechEnd": 19.639,
+   "end": 21.039
+  },
+  {
+   "index": 6,
+   "text": "Eles viram a gente!",
+   "voice": 1,
+   "start": 21.039,
+   "speechEnd": 23.077,
+   "end": 24.177
+  },
+  {
+   "index": 7,
+   "text": "O navio virou com tudo... e passou raspando pelas pedras.",
+   "voice": 0,
+   "start": 24.177,
+   "speechEnd": 27.411,
+   "end": 28.311
+  },
+  {
+   "index": 8,
+   "text": "Ele parou longe dos recifes e desceu um bote salva-vidas.",
+   "voice": 0,
+   "start": 28.311,
+   "speechEnd": 31.413,
+   "end": 32.913
+  },
+  {
+   "index": 9,
+   "text": "Mas aí... o farol tremeu.",
+   "voice": 0,
+   "start": 32.913,
+   "speechEnd": 34.82,
+   "end": 35.82
+  },
+  {
+   "index": 10,
+   "text": "Uma rachadura subiu pela parede. A água tinha comido a base.",
+   "voice": 0,
+   "start": 35.82,
+   "speechEnd": 39.627,
+   "end": 40.727
+  },
+  {
+   "index": 11,
+   "text": "O bote tava chegando... mas o pai da Lia mal conseguia andar.",
+   "voice": 0,
+   "start": 40.727,
+   "speechEnd": 43.982,
+   "end": 45.282
+  },
+  {
+   "index": 12,
+   "text": "Descer pela escada carregando ele...",
+   "voice": 0,
+   "start": 45.282,
+   "speechEnd": 47.259,
+   "end": 47.659
+  },
+  {
+   "index": 13,
+   "text": "ou pular do farol direto no mar, até o bote?",
+   "voice": 0,
+   "start": 47.659,
+   "speechEnd": 50.308,
+   "end": 51.508
+  },
+  {
+   "index": 14,
+   "text": "O que você faria? Comenta A ou B!",
+   "voice": 0,
+   "start": 51.508,
+   "speechEnd": 53.869,
+   "end": 57.669
+  }
+ ],
+ "words": [
+  {
+   "text": "Vocês",
+   "start": 1.036,
+   "end": 1.32,
+   "voice": 0
+  },
+  {
+   "text": "escolheram",
+   "start": 1.32,
+   "end": 1.72,
+   "voice": 0
+  },
+  {
+   "text": "atirar.",
+   "start": 1.76,
+   "end": 2.4,
+   "voice": 0
+  },
+  {
+   "text": "Eu",
+   "start": 2.56,
+   "end": 2.68,
+   "voice": 0
+  },
+  {
+   "text": "mirei",
+   "start": 2.72,
+   "end": 2.92,
+   "voice": 0
+  },
+  {
+   "text": "pro",
+   "start": 2.96,
+   "end": 3.08,
+   "voice": 0
+  },
+  {
+   "text": "céu...",
+   "start": 3.12,
+   "end": 3.6,
+   "voice": 0
+  },
+  {
+   "text": "e",
+   "start": 3.76,
+   "end": 3.88,
+   "voice": 0
+  },
+  {
+   "text": "puxei",
+   "start": 3.88,
+   "end": 4.2,
+   "voice": 0
+  },
+  {
+   "text": "o",
+   "start": 4.2,
+   "end": 4.28,
+   "voice": 0
+  },
+  {
+   "text": "gatilho.",
+   "start": 4.28,
+   "end": 4.92,
+   "voice": 0
+  },
+  {
+   "text": "A",
+   "start": 6.709,
+   "end": 6.789,
+   "voice": 0
+  },
+  {
+   "text": "luz",
+   "start": 6.76,
+   "end": 6.92,
+   "voice": 0
+  },
+  {
+   "text": "vermelha",
+   "start": 6.96,
+   "end": 7.32,
+   "voice": 0
+  },
+  {
+   "text": "subiu,",
+   "start": 7.36,
+   "end": 7.88,
+   "voice": 0
+  },
+  {
+   "text": "rasgando",
+   "start": 7.92,
+   "end": 8.44,
+   "voice": 0
+  },
+  {
+   "text": "a",
+   "start": 8.44,
+   "end": 8.52,
+   "voice": 0
+  },
+  {
+   "text": "noite.",
+   "start": 8.56,
+   "end": 9.12,
+   "voice": 0
+  },
+  {
+   "text": "Por",
+   "start": 10.817,
+   "end": 10.897,
+   "voice": 0
+  },
+  {
+   "text": "um",
+   "start": 10.92,
+   "end": 11.04,
+   "voice": 0
+  },
+  {
+   "text": "segundo...",
+   "start": 11.08,
+   "end": 11.84,
+   "voice": 0
+  },
+  {
+   "text": "nada.",
+   "start": 12.04,
+   "end": 12.56,
+   "voice": 0
+  },
+  {
+   "text": "Então",
+   "start": 14.486,
+   "end": 14.587,
+   "voice": 0
+  },
+  {
+   "text": "o",
+   "start": 14.573,
+   "end": 14.653,
+   "voice": 0
+  },
+  {
+   "text": "navio",
+   "start": 14.72,
+   "end": 14.96,
+   "voice": 0
+  },
+  {
+   "text": "acendeu",
+   "start": 15.0,
+   "end": 15.307,
+   "voice": 0
+  },
+  {
+   "text": "um",
+   "start": 15.293,
+   "end": 15.373,
+   "voice": 0
+  },
+  {
+   "text": "holofote.",
+   "start": 15.4,
+   "end": 16.16,
+   "voice": 0
+  },
+  {
+   "text": "Direto",
+   "start": 16.28,
+   "end": 16.64,
+   "voice": 0
+  },
+  {
+   "text": "na",
+   "start": 16.68,
+   "end": 16.8,
+   "voice": 0
+  },
+  {
+   "text": "gente!",
+   "start": 16.84,
+   "end": 17.283,
+   "voice": 0
+  },
+  {
+   "text": "Ele",
+   "start": 18.1,
+   "end": 18.3,
+   "voice": 0
+  },
+  {
+   "text": "buzinou",
+   "start": 18.3,
+   "end": 18.7,
+   "voice": 0
+  },
+  {
+   "text": "três",
+   "start": 18.74,
+   "end": 19.02,
+   "voice": 0
+  },
+  {
+   "text": "vezes.",
+   "start": 19.06,
+   "end": 19.639,
+   "voice": 0
+  },
+  {
+   "text": "Eles",
+   "start": 21.049,
+   "end": 21.339,
+   "voice": 1
+  },
+  {
+   "text": "viram",
+   "start": 21.319,
+   "end": 21.789,
+   "voice": 1
+  },
+  {
+   "text": "a",
+   "start": 21.769,
+   "end": 21.889,
+   "voice": 1
+  },
+  {
+   "text": "gente!",
+   "start": 21.879,
+   "end": 22.759,
+   "voice": 1
+  },
+  {
+   "text": "O",
+   "start": 24.238,
+   "end": 24.318,
+   "voice": 0
+  },
+  {
+   "text": "navio",
+   "start": 24.318,
+   "end": 24.598,
+   "voice": 0
+  },
+  {
+   "text": "virou",
+   "start": 24.638,
+   "end": 24.838,
+   "voice": 0
+  },
+  {
+   "text": "com",
+   "start": 24.878,
+   "end": 25.158,
+   "voice": 0
+  },
+  {
+   "text": "tudo...",
+   "start": 25.158,
+   "end": 25.665,
+   "voice": 0
+  },
+  {
+   "text": "e",
+   "start": 25.651,
+   "end": 25.731,
+   "voice": 0
+  },
+  {
+   "text": "passou",
+   "start": 25.758,
+   "end": 26.038,
+   "voice": 0
+  },
+  {
+   "text": "raspando",
+   "start": 26.158,
+   "end": 26.598,
+   "voice": 0
+  },
+  {
+   "text": "pelas",
+   "start": 26.638,
+   "end": 26.918,
+   "voice": 0
+  },
+  {
+   "text": "pedras.",
+   "start": 26.998,
+   "end": 27.411,
+   "voice": 0
+  },
+  {
+   "text": "Ele",
+   "start": 28.525,
+   "end": 28.618,
+   "voice": 0
+  },
+  {
+   "text": "parou",
+   "start": 28.658,
+   "end": 28.938,
+   "voice": 0
+  },
+  {
+   "text": "longe",
+   "start": 29.018,
+   "end": 29.218,
+   "voice": 0
+  },
+  {
+   "text": "dos",
+   "start": 29.218,
+   "end": 29.338,
+   "voice": 0
+  },
+  {
+   "text": "recifes",
+   "start": 29.378,
+   "end": 29.898,
+   "voice": 0
+  },
+  {
+   "text": "e",
+   "start": 29.898,
+   "end": 29.978,
+   "voice": 0
+  },
+  {
+   "text": "desceu",
+   "start": 30.018,
+   "end": 30.218,
+   "voice": 0
+  },
+  {
+   "text": "um",
+   "start": 30.258,
+   "end": 30.378,
+   "voice": 0
+  },
+  {
+   "text": "bote",
+   "start": 30.458,
+   "end": 30.618,
+   "voice": 0
+  },
+  {
+   "text": "salva-vidas.",
+   "start": 30.658,
+   "end": 31.413,
+   "voice": 0
+  },
+  {
+   "text": "Mas",
+   "start": 33.098,
+   "end": 33.178,
+   "voice": 0
+  },
+  {
+   "text": "aí...",
+   "start": 33.278,
+   "end": 33.838,
+   "voice": 0
+  },
+  {
+   "text": "o",
+   "start": 33.838,
+   "end": 33.958,
+   "voice": 0
+  },
+  {
+   "text": "farol",
+   "start": 33.998,
+   "end": 34.198,
+   "voice": 0
+  },
+  {
+   "text": "tremeu.",
+   "start": 34.238,
+   "end": 34.82,
+   "voice": 0
+  },
+  {
+   "text": "Uma",
+   "start": 35.958,
+   "end": 36.078,
+   "voice": 0
+  },
+  {
+   "text": "rachadura",
+   "start": 36.118,
+   "end": 36.718,
+   "voice": 0
+  },
+  {
+   "text": "subiu",
+   "start": 36.798,
+   "end": 37.038,
+   "voice": 0
+  },
+  {
+   "text": "pela",
+   "start": 37.078,
+   "end": 37.278,
+   "voice": 0
+  },
+  {
+   "text": "parede.",
+   "start": 37.318,
+   "end": 37.958,
+   "voice": 0
+  },
+  {
+   "text": "A",
+   "start": 37.958,
+   "end": 38.078,
+   "voice": 0
+  },
+  {
+   "text": "água",
+   "start": 38.118,
+   "end": 38.398,
+   "voice": 0
+  },
+  {
+   "text": "tinha",
+   "start": 38.438,
+   "end": 38.638,
+   "voice": 0
+  },
+  {
+   "text": "comido",
+   "start": 38.718,
+   "end": 38.958,
+   "voice": 0
+  },
+  {
+   "text": "a",
+   "start": 38.998,
+   "end": 39.118,
+   "voice": 0
+  },
+  {
+   "text": "base.",
+   "start": 39.398,
+   "end": 39.627,
+   "voice": 0
+  },
+  {
+   "text": "O",
+   "start": 40.898,
+   "end": 41.018,
+   "voice": 0
+  },
+  {
+   "text": "bote",
+   "start": 41.058,
+   "end": 41.178,
+   "voice": 0
+  },
+  {
+   "text": "tava",
+   "start": 41.178,
+   "end": 41.338,
+   "voice": 0
+  },
+  {
+   "text": "chegando...",
+   "start": 41.378,
+   "end": 42.098,
+   "voice": 0
+  },
+  {
+   "text": "mas",
+   "start": 42.098,
+   "end": 42.218,
+   "voice": 0
+  },
+  {
+   "text": "o",
+   "start": 42.218,
+   "end": 42.298,
+   "voice": 0
+  },
+  {
+   "text": "pai",
+   "start": 42.338,
+   "end": 42.458,
+   "voice": 0
+  },
+  {
+   "text": "da",
+   "start": 42.498,
+   "end": 42.618,
+   "voice": 0
+  },
+  {
+   "text": "Lia",
+   "start": 42.618,
+   "end": 42.858,
+   "voice": 0
+  },
+  {
+   "text": "mal",
+   "start": 42.898,
+   "end": 43.018,
+   "voice": 0
+  },
+  {
+   "text": "conseguia",
+   "start": 43.058,
+   "end": 43.498,
+   "voice": 0
+  },
+  {
+   "text": "andar.",
+   "start": 43.578,
+   "end": 43.982,
+   "voice": 0
+  },
+  {
+   "text": "Descer",
+   "start": 45.59,
+   "end": 45.758,
+   "voice": 0
+  },
+  {
+   "text": "pela",
+   "start": 45.758,
+   "end": 45.918,
+   "voice": 0
+  },
+  {
+   "text": "escada",
+   "start": 45.958,
+   "end": 46.318,
+   "voice": 0
+  },
+  {
+   "text": "carregando",
+   "start": 46.358,
+   "end": 46.798,
+   "voice": 0
+  },
+  {
+   "text": "ele...",
+   "start": 46.918,
+   "end": 47.259,
+   "voice": 0
+  },
+  {
+   "text": "ou",
+   "start": 47.825,
+   "end": 47.918,
+   "voice": 0
+  },
+  {
+   "text": "pular",
+   "start": 47.918,
+   "end": 48.158,
+   "voice": 0
+  },
+  {
+   "text": "do",
+   "start": 48.198,
+   "end": 48.318,
+   "voice": 0
+  },
+  {
+   "text": "farol",
+   "start": 48.358,
+   "end": 48.638,
+   "voice": 0
+  },
+  {
+   "text": "direto",
+   "start": 48.718,
+   "end": 49.038,
+   "voice": 0
+  },
+  {
+   "text": "no",
+   "start": 49.038,
+   "end": 49.118,
+   "voice": 0
+  },
+  {
+   "text": "mar,",
+   "start": 49.158,
+   "end": 49.438,
+   "voice": 0
+  },
+  {
+   "text": "até",
+   "start": 49.558,
+   "end": 49.705,
+   "voice": 0
+  },
+  {
+   "text": "o",
+   "start": 49.691,
+   "end": 49.771,
+   "voice": 0
+  },
+  {
+   "text": "bote?",
+   "start": 49.798,
+   "end": 50.308,
+   "voice": 0
+  },
+  {
+   "text": "O",
+   "start": 51.627,
+   "end": 51.707,
+   "voice": 0
+  },
+  {
+   "text": "que",
+   "start": 51.678,
+   "end": 51.758,
+   "voice": 0
+  },
+  {
+   "text": "você",
+   "start": 51.798,
+   "end": 52.078,
+   "voice": 0
+  },
+  {
+   "text": "faria?",
+   "start": 52.145,
+   "end": 52.638,
+   "voice": 0
+  },
+  {
+   "text": "Comenta",
+   "start": 52.678,
+   "end": 53.038,
+   "voice": 0
+  },
+  {
+   "text": "A",
+   "start": 53.078,
+   "end": 53.278,
+   "voice": 0
+  },
+  {
+   "text": "ou",
+   "start": 53.318,
+   "end": 53.438,
+   "voice": 0
+  },
+  {
+   "text": "B!",
+   "start": 53.478,
+   "end": 53.869,
+   "voice": 0
+  }
+ ]
+}

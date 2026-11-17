@@ -65,6 +65,18 @@ EPISODES = {
         ],
         "tail": 3.5,
     },
+    "ep05": {
+        "sources": [(f"{A}/ep05/davi_take1.mp3", f"{A}/ep05/davi_take1_words.json"),
+                    (f"{A}/ep05/lia_take1.mp3", f"{A}/ep05/lia_take1_words.json")],
+        "lines": [
+            ("Vocês escolheram", 1.0), ("A luz vermelha", 1.6), ("Por um segundo", 1.4),
+            ("Então o navio", 1.6), ("Ele buzinou", 0.7), ("Eles viram", 1.4, 1),
+            ("O navio virou", 1.1), ("Ele parou", 0.9), ("Mas aí", 1.5),
+            ("Uma rachadura", 1.0), ("O bote", 1.1), ("Descer pela", 1.3),
+            ("ou pular", 0.4), ("O que você", 1.2),
+        ],
+        "tail": 3.8,
+    },
 }
 
 ep = sys.argv[1] if len(sys.argv) > 1 else "ep01"

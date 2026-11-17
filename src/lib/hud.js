@@ -74,6 +74,7 @@ export class HUD {
     if (fx.redPulse) { const a = fx.redPulse; const gr = g.createRadialGradient(540, 960, 400, 540, 960, 1150); gr.addColorStop(0, 'rgba(255,0,0,0)'); gr.addColorStop(1, `rgba(220,0,0,${a})`); g.fillStyle = gr; g.fillRect(0, 0, 1080, 1920); }
     if (fx.arrows) this.arrows(g, t, fx.arrows);
     if (fx.flow) this.flow(g, t, fx.flow);
+    if (fx.rings) this.rings(g, t, fx.rings);
     if (fx.sepia) this.sepia(g, fx.sepia);
     if (fx.badge) this.badge(g, t, fx.badge);
     if (fx.split) this.split(g, t, fx.split);
@@ -202,6 +203,15 @@ export class HUD {
       g.fillStyle = '#3fe0ff'; g.strokeStyle = '#000'; g.lineWidth = 8;
       g.beginPath(); g.moveTo(-90, -22); g.lineTo(20, -22); g.lineTo(20, -52); g.lineTo(90, 0); g.lineTo(20, 52); g.lineTo(20, 22); g.lineTo(-90, 22); g.closePath(); g.stroke(); g.fill();
       g.restore();
+    }
+    g.restore();
+  }
+  rings(g, t, r) { // ondas sonoras (buzina): círculos expandindo a partir de um ponto da tela
+    g.save();
+    for (let i = 0; i < 4; i++) {
+      const q = ((t - (r.t0 || 0)) * 1.2 + i * 0.25) % 1;
+      g.globalAlpha = (1 - q) * (r.k ?? 1); g.lineWidth = 14 * (1 - q) + 3; g.strokeStyle = '#ffffff';
+      g.beginPath(); g.arc(r.x, r.y, 40 + q * 420, 0, Math.PI * 2); g.stroke();
     }
     g.restore();
   }

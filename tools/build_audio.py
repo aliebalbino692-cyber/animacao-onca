@@ -179,6 +179,29 @@ elif EP == "ep04":
     mix += pad([87.3, 130.8, 174.6, 220], shot(9), shot(11), 0.08)    # reencontro
     mix += pad([55, 82.4, 110, 130.8, 164.8], shot(11), DUR, 0.10)    # clímax
     mix += pulse([(shot(2), shot(6)), (shot(11), DUR - 1)])
+elif EP == "ep05":
+    tG, tNada, tHolo, tTrem, tRach = word("gatilho"), word("nada"), word("holofote"), word("tremeu"), word("rachadura")
+    mix += wind * 0.10 * env(0, DUR, 0.5) + ocean * 0.08 * env(0, DUR, 0.5)
+    mix += burst(tG + 0.3, 0.8, lambda tt: (white[:len(tt)] - lowpass(white[:len(tt)], 5)) * np.exp(-tt * 9) + np.sin(2 * np.pi * 70 * tt) * np.exp(-tt * 12)) * 0.8  # disparo
+    mix += burst(tG + 0.4, 3.0, lambda tt: normed(lowpass(white[:len(tt)], 10)) * np.exp(-tt * 0.9) * (1 - np.exp(-tt * 10))) * 0.35  # chiado do sinalizador subindo
+    def horn(tt):  # buzina grave do navio
+        return (np.sign(np.sin(2 * np.pi * 98 * tt)) * 0.3 + np.sin(2 * np.pi * 98 * tt) + np.sin(2 * np.pi * 147 * tt) * 0.5) * np.clip(tt / 0.05, 0, 1) * np.clip((0.55 - tt) / 0.1, 0, 1)
+    for x in (word("buzinou"), word("tres"), word("vezes")):
+        mix += burst(x - 0.05, 0.6, horn) * 0.28
+    mix += burst(tHolo - 0.1, 0.6, lambda tt: np.sin(2 * np.pi * 60 * tt) * np.exp(-tt * 6)) * 0.4  # holofote liga
+    mix += normed(lowpass(white, 30)) * 0.18 * env(shot(7), shot(8), 0.5)                    # navio raspando
+    mix += normed(lowpass(brown, 60)) * 0.5 * env(tTrem - 0.5, shot(11), 0.3)                 # tremor
+    for k in range(6):
+        mix += burst(tRach - 0.2 + k * 0.45, 0.5, lambda tt: white[:len(tt)] * np.exp(-tt * 18)) * 0.4  # estalos da rachadura
+    mix += burst(word("base") + 0.2, 1.2, splash) * 0.4
+    for at in (tG + 0.3, tHolo - 0.1, tTrem - 0.3, line(12)["start"] - 0.2, word("faria")):
+        mix += burst(at, 2.5, hit) * 0.5
+    cuts = [shot(i) for i in range(2, 15)] + [word("eu", 1) - 0.1, word("direto") - 0.1]
+    mix += heart(word("eu", 1), tG + 0.3, 125) * 0.5 + heart(line(3)["start"] - 0.4, tHolo - 0.2, 70) * 0.6 + heart(tTrem, line(14)["start"], 120) * 0.5
+    mix += pad([55, 82.4, 110, 116.54], 0, shot(4), 0.09)             # tensão do tiro
+    mix += pad([87.3, 130.8, 174.6, 220], shot(4), shot(9), 0.09)     # resgate (alegria)
+    mix += pad([55, 82.4, 110, 130.8, 164.8], shot(9), DUR, 0.10)     # perigo de novo
+    mix += pulse([(shot(9), DUR - 1)])
 else:
     raise SystemExit("episódio sem trilha definida: " + EP)
 for at in cuts:

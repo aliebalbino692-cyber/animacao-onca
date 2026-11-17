@@ -1,0 +1,5 @@
+{"note": "tempos aproximados por detecção de silêncio", "words": [
+ {"text": "Eles", "type": "word", "start": 0.05, "end": 0.30},
+ {"text": "viram", "type": "word", "start": 0.32, "end": 0.75},
+ {"text": "a", "type": "word", "start": 0.77, "end": 0.85},
+ {"text": "gente!", "type": "word", "start": 0.88, "end": 1.72}]}
